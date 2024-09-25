@@ -1,0 +1,76 @@
+import React from "react";
+import { ArrowRightIcon, ArrowDownIcon } from "@heroicons/react/24/outline"; // Importing the arrow icon
+import BackgroundImage from "./image/82.jpg";
+
+export default function DifferenceSection() {
+  return (
+    <div
+      className="h-screen bg-cover bg-center relative"
+      style={{
+        backgroundImage: `url(${BackgroundImage})`, // Background image
+      }}
+    >
+      {/* Overlay for dimming effect */}
+      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+
+      {/* Content Section */}
+      <div className="relative z-10 w-full px-4 sm:px-8 md:px-10 lg:px-16 flex flex-col lg:flex-row items-center justify-center h-full">
+        {/* Left Side Text */}
+        <div className="text-white text-center lg:text-left mb-6 lg:mb-0">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-5 lg:mb-10">
+            How we’re making a difference
+          </h1>
+        </div>
+
+        {/* Right Side Text */}
+        <div className="text-white lg:w-2/3 space-y-8 ml-auto flex flex-col items-center lg:items-start">
+          {/* Piece of Mind Association Section */}
+          <div className="group relative text-center lg:text-left">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold cursor-pointer relative inline-block">
+              <span>Piece of Mind Association</span>
+              {/* Arrow Icon Behind Text */}
+              <ArrowDownIcon className="w-6 h-6 sm:w-8 sm:h-8 text-white absolute -right-8 sm:-right-10 top-1/2 transform -translate-y-1/2 group-hover:opacity-0 transition-opacity duration-300 lg:hidden" />
+              <ArrowRightIcon className="w-6 h-6 sm:w-8 sm:h-8 text-white absolute -right-8 sm:-right-10 top-1/2 transform -translate-y-1/2 group-hover:opacity-0 transition-opacity duration-300 hidden lg:block" />
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl leading-relaxed opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-screen group-hover:mt-2 transition-all duration-500 ease-in-out overflow-hidden">
+              supports society's most vulnerable and those left behind, focusing
+              on women, children, refugees, displaced persons, conflict zones,
+              and trauma-affected populations.
+            </p>
+          </div>
+
+          {/* Community-led approach Section */}
+          <div className="group relative text-center lg:text-left">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold cursor-pointer relative inline-block">
+              <span>Our community-led approach</span>
+              {/* Arrow Icon Behind Text */}
+              <ArrowDownIcon className="w-6 h-6 sm:w-8 sm:h-8 text-white absolute -right-8 sm:-right-10 top-1/2 transform -translate-y-1/2 group-hover:opacity-0 transition-opacity duration-300 lg:hidden" />
+              <ArrowRightIcon className="w-6 h-6 sm:w-8 sm:h-8 text-white absolute -right-8 sm:-right-10 top-1/2 transform -translate-y-1/2 group-hover:opacity-0 transition-opacity duration-300 hidden lg:block" />
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl leading-relaxed opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-screen group-hover:mt-2 transition-all duration-500 ease-in-out overflow-hidden">
+              provides accessible, culturally relevant, and sustainable mental
+              health services, emphasizing holistic functionality to facilitate
+              reintegration. We strengthen mental and social care
+              infrastructures in conflict-affected regions globally.
+            </p>
+          </div>
+
+          {/* Interdisciplinary team Section */}
+          <div className="group relative text-center lg:text-left">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold cursor-pointer relative inline-block">
+              <span>Our interdisciplinary team</span>
+              {/* Arrow Icons */}
+              <ArrowDownIcon className="w-6 h-6 sm:w-8 sm:h-8 text-white absolute -right-8 sm:-right-10 top-1/2 transform -translate-y-1/2 group-hover:opacity-0 transition-opacity duration-300 lg:hidden" />
+              <ArrowRightIcon className="w-6 h-6 sm:w-8 sm:h-8 text-white absolute -right-8 sm:-right-10 top-1/2 transform -translate-y-1/2 group-hover:opacity-0 transition-opacity duration-300 hidden lg:block" />
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl leading-relaxed opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-screen group-hover:mt-2 transition-all duration-500 ease-in-out overflow-hidden">
+              delivers contextualized, culturally appropriate, evidence-informed
+              mental health services to governments, communities, families,
+              organizations, and individuals.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
