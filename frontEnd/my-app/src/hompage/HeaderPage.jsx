@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Image from "./image/2.jpeg"; // Adjust the path as needed
+import Image from "./image/2.jpg"; // Adjust the path as needed
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
 export default function Header() {
@@ -59,17 +59,15 @@ export default function Header() {
 
       {/* Text content */}
       <div className="relative z-10 flex items-center h-full">
-      <p
-  className="text-left text-white font-bold leading-snug p-6 tracking-wide bg-opacity-60 rounded-md text-2xl sm:text-3xl md:text-4xl lg:text-5xl w-[90%] sm:w-[70%] md:w-[60%] lg:w-[43%]"
-  style={{
-    backgroundColor: "rgba(63, 208, 162, 0.23)",
-  }}
->
-  GLOBALLY,
-  <br /> 1 in 8 people live with a <br /> mental health condition,
-  <br /> with suicide being the <br />
-  fourth leading cause of death <br /> among 15-29-year-olds
-</p>
+        <p
+          className="text-left text-white font-bold leading-snug p-6 tracking-wide bg-opacity-60  text-2xl sm:text-3xl md:text-4xl lg:text-5xl w-[90%] sm:w-[70%] md:w-[70%] lg:w-[52%] rounded-r-xl "
+          style={{
+            backgroundColor: "rgba(63, 208, 162, 0.23)",
+          }}
+        >
+          GLOBALLY, 1 in 8 people live with a mental health condition, with
+          suicide being the fourth leading cause of death among 15-29-year-olds
+        </p>
       </div>
 
       {/* Chevron Down Icon */}

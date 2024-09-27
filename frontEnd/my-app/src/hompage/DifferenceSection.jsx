@@ -10,8 +10,11 @@ export default function DifferenceSection() {
         backgroundImage: `url(${BackgroundImage})`, // Background image
       }}
     >
-      {/* Overlay for dimming effect */}
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+      {/* Overlay for dimming and smaller top shadow effect */}
+      <div
+        className="absolute inset-0 bg-gradient-to-b from-[#581d7d97] to-transparent h-[30px]"
+        style={{ opacity: 0.6 }} // Adjust opacity as needed
+      />
 
       {/* Content Section */}
       <div className="relative z-10 w-full px-4 sm:px-8 md:px-10 lg:px-16 flex flex-col lg:flex-row items-center justify-center h-full">

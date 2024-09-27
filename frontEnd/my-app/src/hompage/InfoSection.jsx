@@ -5,10 +5,11 @@ import Logo from "./image/Logo.png";
 export default function InfoSection() {
   return (
     <div className="h-[80vh] flex flex-col justify-center items-center text-center bg-[#eaf7f5] p-6 sm:p-8 md:p-10 transition-opacity duration-500">
+      
       <img
         src={Logo}
         alt="PoMA Logo"
-        className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 mb-6 sm:mb-8 md:mb-10"
+        className=" h-16 sm:h-20 md:h-24  lg:h-28 mb-6 sm:mb-8 md:mb-10"
       />
       <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black max-w-2xl sm:max-w-3xl md:max-w-4xl">
         Peace of Mind Association (POMA) breaks cycles of suffering by providing
