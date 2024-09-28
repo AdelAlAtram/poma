@@ -28,27 +28,27 @@ const WhatweDo = [
   },
   {
     name: "Child Protection & Social Policy",
-    href: "#",
+    href: "/ChildProtection",
     icon: ChartPieIcon,
   },
   {
     name: "Gender and Gender-based Violence (GBV)",
-    href: "#",
+    href: "/GBV",
     icon: ChartPieIcon,
   },
   {
     name: "Conflict",
-    href: "#",
+    href: "/Conflict",
     icon: ChartPieIcon,
   },
   {
     name: "Human Rights",
-    href: "#",
+    href: "/HumanRights",
     icon: ChartPieIcon,
   },
   {
     name: "Research",
-    href: "#",
+    href: "/Research",
     icon: ChartPieIcon,
   },
 ];
@@ -146,7 +146,7 @@ export default function NavBar() {
             </PopoverPanel>
           </Popover>
 
-          <a href="/" className="text-md font-semibold leading-6 text-black ">
+          <a href="/OurWay" className="text-md font-semibold leading-6 text-black ">
             Our Way
           </a>
           <a href="/" className="text-md font-semibold leading-6 text-black ">

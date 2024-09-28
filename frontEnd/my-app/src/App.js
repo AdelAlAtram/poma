@@ -7,6 +7,13 @@ import ImageCut from "./hompage/ImageCut";
 import InfoSection from "./hompage/InfoSection";
 import NavBar from "./hompage/NavBar";
 import MentalHealth from "./hompage/MentalHealth";
+import ChildProtection from "./hompage/ChildProtection";
+import GBV from "./hompage/GBV";
+import Conflict from "./hompage/Conflict";
+import HumanRights from "./hompage/HumanRights";
+import Research from "./hompage/Research";
+import OurWay from "./hompage/OurWay";
+import SecInOurWay from "./hompage/SecInOurWay";
 
 function App() {
   return (
@@ -29,6 +36,21 @@ function App() {
           />
           {/* Future Routes can be added here */}
           <Route path="/MentalHealth" element={<MentalHealth />} />
+          <Route path="/ChildProtection" element={<ChildProtection />} />
+          <Route path="/GBV" element={<GBV />} />
+          <Route path="/Conflict" element={<Conflict />} />
+          <Route path="/HumanRights" element={<HumanRights />} />
+          <Route path="/Research" element={<Research />} />
+          <Route
+            path="/OurWay"
+            element={
+              <>
+                <OurWay />
+                <SecInOurWay />
+              </>
+            }
+          />
+      
         </Routes>
       </div>
     </Router>
