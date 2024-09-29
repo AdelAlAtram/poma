@@ -14,6 +14,11 @@ import HumanRights from "./hompage/HumanRights";
 import Research from "./hompage/Research";
 import OurWay from "./hompage/OurWay";
 import SecInOurWay from "./hompage/SecInOurWay";
+import News from "./hompage/News";
+import POMAStories from "./hompage/POMAStories";
+import InTheirWords from "./hompage/InTheirWords";
+import Publications from "./hompage/Publications";
+import WhereWeWork from "./hompage/WhereWeWork";
 
 function App() {
   return (
@@ -41,6 +46,11 @@ function App() {
           <Route path="/Conflict" element={<Conflict />} />
           <Route path="/HumanRights" element={<HumanRights />} />
           <Route path="/Research" element={<Research />} />
+          <Route path="/News" element={<News />} />
+          <Route path="/POMAStories" element={<POMAStories />} />
+          <Route path="/InTheirWords" element={<InTheirWords />} />
+          <Route path="/Publications" element={<Publications />} />
+          <Route path="/WhereWeWork" element={<WhereWeWork />} />
           <Route
             path="/OurWay"
             element={

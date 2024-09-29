@@ -55,17 +55,34 @@ const WhatweDo = [
 const Blog = [
   {
     name: "News and current events",
-    href: "#",
+    href: "/News",
     icon: ChartPieIcon,
   },
   {
     name: "POMA's Stories",
-    href: "#",
+    href: "/POMAStories",
     icon: ChartPieIcon,
   },
   {
     name: "In their words",
-    href: "#",
+    href: "/InTheirWords",
+    icon: ChartPieIcon,
+  },
+];
+const Aboutus = [
+  {
+    name: "News and current events",
+    href: "/News",
+    icon: ChartPieIcon,
+  },
+  {
+    name: "POMA's Stories",
+    href: "/POMAStories",
+    icon: ChartPieIcon,
+  },
+  {
+    name: "In their words",
+    href: "/InTheirWords",
     icon: ChartPieIcon,
   },
 ];
@@ -151,11 +168,14 @@ export default function NavBar() {
           >
             Our Way
           </a>
-          <a href="/" className="text-md font-semibold leading-6 text-black ">
+          <a
+            href="/WhereWeWork"
+            className="text-md font-semibold leading-6 text-black "
+          >
             Where we work
           </a>
           <Popover className="relative">
-          <PopoverButton className="flex items-center gap-x-1 text-md font-semibold leading-6 text-black focus:outline-none focus:ring-0">
+            <PopoverButton className="flex items-center gap-x-1 text-md font-semibold leading-6 text-black focus:outline-none focus:ring-0">
               Blog
               <ChevronDownIcon
                 aria-hidden="true"
@@ -195,7 +215,10 @@ export default function NavBar() {
               </div>
             </PopoverPanel>
           </Popover>
-          <a href="/" className="text-md font-semibold leading-6 text-black ">
+          <a
+            href="/Publications"
+            className="text-md font-semibold leading-6 text-black "
+          >
             Publications
           </a>
           <a href="/" className="text-md font-semibold leading-6 text-black ">
@@ -289,6 +312,27 @@ export default function NavBar() {
                     ))}
                   </DisclosurePanel>
                 </Disclosure>
+                <Disclosure as="div" className="-mx-3">
+                  <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                    About us
+                    <ChevronDownIcon
+                      aria-hidden="true"
+                      className="h-5 w-5 flex-none group-data-[open]:rotate-180"
+                    />
+                  </DisclosureButton>
+                  <DisclosurePanel className="mt-2 space-y-2">
+                    {[...Aboutus].map((item) => (
+                      <DisclosureButton
+                        key={item.name}
+                        as="a"
+                        href={item.href}
+                        className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                      >
+                        {item.name}
+                      </DisclosureButton>
+                    ))}
+                  </DisclosurePanel>
+                </Disclosure>
                 <a
                   href="/OurWay"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
@@ -296,17 +340,16 @@ export default function NavBar() {
                   Our Way
                 </a>
                 <a
-                  href="/"
+                  href="/WhereWeWork"
+                  className="text-md font-semibold leading-6 text-black "
+                >
+                  Where we work
+                </a>
+                <a
+                  href="/Publications"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Publications
-                </a>
-          
-                <a
-                  href="/"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  About us
                 </a>
               </div>
               <div className="py-6">
