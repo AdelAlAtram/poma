@@ -30,7 +30,7 @@ export default function SecInOurWay() {
       description: "we aim to empower individuals and communities to participate and take an active role in their own care and decision-making processes",
     },
     results: {
-      title: "Results Are:",
+      title: "Results",
       description: "Increase access and reduce disparities in care available Enhanced self-sufficiency and social cohesion sustainable systems of care that will ensure long-lasting impact",
     },
   };
@@ -41,7 +41,7 @@ export default function SecInOurWay() {
   };
 
   return (
-    <div className="flex mt-2 flex-col sm:flex-row min-h-screen">
+    <div className="flex mt-2 flex-col sm:flex-row min-h-[70vh]">
       {/* Left Side with clickable options */}
       <div className="w-full sm:w-1/3 p-6 space-y-6">
         <h3
@@ -81,14 +81,14 @@ export default function SecInOurWay() {
           className="cursor-pointer text-lg font-bold flex items-center justify-between border-4 p-2 rounded-xl"
           onClick={() => handleItemClick("results")}
         >
-          Results Are:
+          Results
           <ArrowRightIcon className="w-6 h-6 hidden lg:block" />
           <ArrowDownIcon className="w-6 h-6 lg:hidden" />
         </h3>
       </div>
 
       {/* Right Side for dynamic content */}
-      <div className="w-full sm:w-2/3 bg-gray-100 p-6 flex items-center justify-center">
+      <div className="w-full sm:w-2/3 bg-gray-100 p-6 flex ">
         <div>
           <h1 className="text-4xl font-bold mb-4">{selectedContent.title}</h1>
           <p className="text-lg">{selectedContent.description}</p>

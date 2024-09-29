@@ -12,7 +12,7 @@ export default function OurWay() {
     >
       {/* Gradient overlay with the green color #3FD0A2 */}
       <div
-        className="absolute inset-0 bg-gradient-to-b from-[#3FD0A2] to-transparent"
+        className="absolute inset-0 bg-gradient-to-b from-[#006042] to-transparent"
         style={{ opacity: 0.35 }} // Adjust opacity for more visibility
       />
 

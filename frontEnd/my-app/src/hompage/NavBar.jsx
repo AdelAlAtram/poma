@@ -105,11 +105,11 @@ export default function NavBar() {
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-md font-semibold leading-6 text-black">
+            <PopoverButton className="flex items-center gap-x-1 text-md font-semibold leading-6 text-black focus:outline-none focus:ring-0">
               WHAT WE DO
               <ChevronDownIcon
                 aria-hidden="true"
-                className="h-5 w-5 flex-none "
+                className="h-5 w-5 flex-none"
                 style={{ color: "#3fd0a2" }}
               />
             </PopoverButton>
@@ -138,7 +138,6 @@ export default function NavBar() {
                         {item.name}
                         <span className="absolute inset-0" />
                       </a>
-                      {/* <p className="mt-1 text-gray-600">{item.description}</p> */}
                     </div>
                   </div>
                 ))}
@@ -146,14 +145,17 @@ export default function NavBar() {
             </PopoverPanel>
           </Popover>
 
-          <a href="/OurWay" className="text-md font-semibold leading-6 text-black ">
+          <a
+            href="/OurWay"
+            className="text-md font-semibold leading-6 text-black "
+          >
             Our Way
           </a>
           <a href="/" className="text-md font-semibold leading-6 text-black ">
             Where we work
           </a>
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-md font-semibold leading-6 text-black">
+          <PopoverButton className="flex items-center gap-x-1 text-md font-semibold leading-6 text-black focus:outline-none focus:ring-0">
               Blog
               <ChevronDownIcon
                 aria-hidden="true"
@@ -288,11 +290,18 @@ export default function NavBar() {
                   </DisclosurePanel>
                 </Disclosure>
                 <a
+                  href="/OurWay"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                  Our Way
+                </a>
+                <a
                   href="/"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Publications
                 </a>
+          
                 <a
                   href="/"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
