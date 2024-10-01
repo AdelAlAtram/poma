@@ -4,32 +4,32 @@ import Image from "./image/4.png"; // Adjust the path as needed
 const products = [
   {
     id: 1,
-    text: "lorem lorem lorem loremloremlorem lorem lorem lorem",
+    text: "Reintegration and Reunification",
     imageSrc: Image,
   },
   {
     id: 1,
-    text: "lorem lorem lorem loremloremlorem lorem lorem lorem",
+    text: "Psychological Rehabilitation for CAAFAG",
     imageSrc: Image,
   },
   {
     id: 1,
-    text: "lorem lorem lorem loremloremlorem lorem lorem lorem",
+    text: "Post-release Support and Monitoring",
     imageSrc: Image,
   },
   {
     id: 1,
-    text: "lorem lorem lorem loremloremlorem lorem lorem lorem",
+    text: "led Support Groups",
     imageSrc: Image,
   },
   {
     id: 1,
-    text: "lorem lorem lorem loremloremlorem lorem lorem lorem",
+    text: "Juvenile Justice",
     imageSrc: Image,
   },
   {
     id: 1,
-    text: "lorem lorem lorem loremloremlorem lorem lorem lorem",
+    text: "Law Enforcement Mental Health Informed Guidance",
     imageSrc: Image,
   },
 ];

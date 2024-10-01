@@ -71,18 +71,23 @@ const Blog = [
 ];
 const Aboutus = [
   {
-    name: "News and current events",
-    href: "/News",
+    name: "Who we are",
+    href: "/Whoweare",
     icon: ChartPieIcon,
   },
   {
-    name: "POMA's Stories",
-    href: "/POMAStories",
+    name: "Philosophy",
+    href: "/Philosophy",
     icon: ChartPieIcon,
   },
   {
-    name: "In their words",
-    href: "/InTheirWords",
+    name: "Core peinciples",
+    href: "/Corepeinciples",
+    icon: ChartPieIcon,
+  },
+  {
+    name: "Our vision",
+    href: "/Corepeinciples",
     icon: ChartPieIcon,
   },
 ];
@@ -174,6 +179,48 @@ export default function NavBar() {
           >
             Where we work
           </a>
+
+          <Popover className="relative">
+            <PopoverButton className="flex items-center gap-x-1 text-md font-semibold leading-6 text-black focus:outline-none focus:ring-0">
+              About us
+              <ChevronDownIcon
+                aria-hidden="true"
+                className="h-5 w-5 flex-none "
+                style={{ color: "#3fd0a2" }}
+              />
+            </PopoverButton>
+
+            <PopoverPanel
+              transition
+              className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+            >
+              <div className="p-4">
+                {Blog.map((item) => (
+                  <div
+                    key={item.name}
+                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+                  >
+                    <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                      <FaHandsHoldingChild
+                        aria-hidden="true"
+                        className="h-6 w-6 text-gray-600 group-hover:text-pomaGreen"
+                      />
+                    </div>
+                    <div className="flex-auto">
+                      <a
+                        href={item.href}
+                        className="block font-semibold text-gray-900"
+                      >
+                        {item.name}
+                        <span className="absolute inset-0" />
+                      </a>
+                      {/* <p className="mt-1 text-gray-600">{item.description}</p> */}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </PopoverPanel>
+          </Popover>
           <Popover className="relative">
             <PopoverButton className="flex items-center gap-x-1 text-md font-semibold leading-6 text-black focus:outline-none focus:ring-0">
               Blog
@@ -220,9 +267,6 @@ export default function NavBar() {
             className="text-md font-semibold leading-6 text-black "
           >
             Publications
-          </a>
-          <a href="/" className="text-md font-semibold leading-6 text-black ">
-            About us
           </a>
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -335,19 +379,19 @@ export default function NavBar() {
                 </Disclosure>
                 <a
                   href="/OurWay"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-3 py-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Our Way
                 </a>
                 <a
                   href="/WhereWeWork"
-                  className="text-md font-semibold leading-6 text-black "
+                   className="-mx-3 block rounded-lg px-3 py-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Where we work
                 </a>
                 <a
                   href="/Publications"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-3 py-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Publications
                 </a>

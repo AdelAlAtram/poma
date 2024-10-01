@@ -4,42 +4,42 @@ import Image from "./image/4.png"; // Adjust the path as needed
 const products = [
   {
     id: 1,
-    text: "lorem lorem lorem loremloremlorem lorem lorem lorem",
+    text: "Local Data Collection Methods",
     imageSrc: Image,
   },
   {
     id: 1,
-    text: "lorem lorem lorem loremloremlorem lorem lorem lorem",
+    text: "Evidence Informed",
     imageSrc: Image,
   },
   {
     id: 1,
-    text: "lorem lorem lorem loremloremlorem lorem lorem lorem",
+    text: "Implementation Science",
     imageSrc: Image,
   },
   {
     id: 1,
-    text: "lorem lorem lorem loremloremlorem lorem lorem lorem",
+    text: "Applied Evaluation Research",
     imageSrc: Image,
   },
   {
     id: 1,
-    text: "lorem lorem lorem loremloremlorem lorem lorem lorem",
+    text: "Traumatization Prevention Training research teams",
     imageSrc: Image,
   },
   {
     id: 1,
-    text: "lorem lorem lorem loremloremlorem lorem lorem lorem",
+    text: "Needs Assessment and Gap Analysis, Clinical Assessments",
     imageSrc: Image,
   },
   {
     id: 1,
-    text: "lorem lorem lorem loremloremlorem lorem lorem lorem",
+    text: "Applied and Implementation Research",
     imageSrc: Image,
   },
   {
     id: 1,
-    text: "lorem lorem lorem loremloremlorem lorem lorem lorem",
+    text: "Program Evaluation and Case Studies",
     imageSrc: Image,
   },
 ];

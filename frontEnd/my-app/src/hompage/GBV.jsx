@@ -4,32 +4,37 @@ import Image from "./image/4.png"; // Adjust the path as needed
 const products = [
   {
     id: 1,
-    text: "lorem lorem lorem loremloremlorem lorem lorem lorem",
+    text: "Survivor-led Therapy",
     imageSrc: Image,
   },
   {
     id: 1,
-    text: "lorem lorem lorem loremloremlorem lorem lorem lorem",
+    text: "Referral Mechanisms for GBV",
     imageSrc: Image,
   },
   {
     id: 1,
-    text: "lorem lorem lorem loremloremlorem lorem lorem lorem",
+    text: "Gender Sensitivity and Diversity Training",
     imageSrc: Image,
   },
   {
     id: 1,
-    text: "lorem lorem lorem loremloremlorem lorem lorem lorem",
+    text: "Rehabilitation of GBV Survivors",
     imageSrc: Image,
   },
   {
     id: 1,
-    text: "lorem lorem lorem loremloremlorem lorem lorem lorem",
+    text: "Women and Girls Rights",
     imageSrc: Image,
   },
   {
     id: 1,
-    text: "lorem lorem lorem loremloremlorem lorem lorem lorem",
+    text: "Women's Economic Empowerment",
+    imageSrc: Image,
+  },
+  {
+    id: 1,
+    text: "Legal Support and Advocacy",
     imageSrc: Image,
   },
 ];

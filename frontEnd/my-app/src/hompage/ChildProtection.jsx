@@ -4,27 +4,32 @@ import Image from "./image/4.png"; // Adjust the path as needed
 const products = [
   {
     id: 1,
-    text: "lorem lorem lorem loremloremlorem lorem lorem lorem",
+    text: "Early Childhood Development",
     imageSrc: Image,
   },
   {
     id: 1,
-    text: "lorem lorem lorem loremloremlorem lorem lorem lorem",
+    text: "Child-Therapeutic Psychotherapy Development",
     imageSrc: Image,
   },
   {
     id: 1,
-    text: "lorem lorem lorem loremloremlorem lorem lorem lorem",
+    text: "Family Mediation and Parental Support",
     imageSrc: Image,
   },
   {
     id: 1,
-    text: "lorem lorem lorem loremloremlorem lorem lorem lorem",
+    text: "Child Rights",
     imageSrc: Image,
   },
   {
     id: 1,
-    text: "lorem lorem lorem loremloremlorem lorem lorem lorem",
+    text: "Guidance on Global Standards for Child Care",
+    imageSrc: Image,
+  },
+  {
+    id: 1,
+    text: "Monitoring and Evaluation of Child's Rights",
     imageSrc: Image,
   },
 ];
@@ -34,7 +39,7 @@ export default function ChildProtection() {
     <div className="bg-white">
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
         <h2 className="text-4xl font-bold tracking-tight text-gray-900 mb-16 text-center">
-        Child Protection & Social Policy
+          Child Protection & Social Policy
         </h2>
 
         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8 justify-items-center">

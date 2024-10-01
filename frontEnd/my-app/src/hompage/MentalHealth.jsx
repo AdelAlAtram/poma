@@ -4,72 +4,72 @@ import Image from "./image/4.png"; // Adjust the path as needed
 const products = [
   {
     id: 1,
-    text: "lorem lorem lorem loremloremlorem lorem lorem lorem",
+    text: "Clinical Supervision and Capacity Building",
     imageSrc: Image,
   },
   {
     id: 1,
-    text: "lorem lorem lorem loremloremlorem lorem lorem lorem",
+    text: "Strategy and Policy",
     imageSrc: Image,
   },
   {
     id: 1,
-    text: "lorem lorem lorem loremloremlorem lorem lorem lorem",
+    text: "Mental Health Frameworks",
     imageSrc: Image,
   },
   {
     id: 1,
-    text: "lorem lorem lorem loremloremlorem lorem lorem lorem",
+    text: "Mental Health Policies",
     imageSrc: Image,
   },
   {
     id: 1,
-    text: "lorem lorem lorem loremloremlorem lorem lorem lorem",
+    text: "Mental Health System Development",
     imageSrc: Image,
   },
   {
     id: 1,
-    text: "lorem lorem lorem loremloremlorem lorem lorem lorem",
+    text: "Standards of Practices for Mental Health",
     imageSrc: Image,
   },
   {
     id: 1,
-    text: "lorem lorem lorem loremloremlorem lorem lorem lorem",
+    text: "Crisis Response",
     imageSrc: Image,
   },
   {
     id: 1,
-    text: "lorem lorem lorem loremloremlorem lorem lorem lorem",
+    text: "Advocacy & Prevention Awareness",
     imageSrc: Image,
   },
   {
     id: 1,
-    text: "lorem lorem lorem loremloremlorem lorem lorem lorem",
+    text: "Community Engagement",
     imageSrc: Image,
   },
   {
     id: 1,
-    text: "lorem lorem lorem loremloremlorem lorem lorem lorem",
+    text: "Capacity Development and Training",
     imageSrc: Image,
   },
   {
     id: 1,
-    text: "lorem lorem lorem loremloremlorem lorem lorem lorem",
+    text: "Technical Assistance, Review",
     imageSrc: Image,
   },
   {
     id: 1,
-    text: "lorem lorem lorem loremloremlorem lorem lorem lorem",
+    text: "Vicarious Trauma and Providers MH Support",
     imageSrc: Image,
   },
   {
     id: 1,
-    text: "lorem lorem lorem loremloremlorem lorem lorem lorem",
+    text: "Stakeholder Analysis and Mapping",
     imageSrc: Image,
   },
   {
     id: 1,
-    text: "lorem lorem lorem loremloremlorem lorem lorem lorem",
+    text: "Establish Working Groups & Coordination Bodies",
     imageSrc: Image,
   },
 ];
@@ -79,7 +79,7 @@ export default function MentalHealth() {
     <div className="bg-white">
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
         <h2 className="text-4xl font-bold tracking-tight text-gray-900 mb-16 text-center">
-        Mental Health & Psychology Development
+          Mental Health & Psychology Development
         </h2>
 
         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 justify-items-center">
