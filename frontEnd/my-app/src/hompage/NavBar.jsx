@@ -72,14 +72,14 @@ const Blog = [
 const Aboutus = [
   {
     name: "Who we are",
-    href: "/Whoweare",
+    href: "/AboutUs",
     icon: ChartPieIcon,
   },
-  {
-    name: "Philosophy",
-    href: "/Philosophy",
-    icon: ChartPieIcon,
-  },
+  // {
+  //   name: "Philosophy",
+  //   href: "/Philosophy",
+  //   icon: ChartPieIcon,
+  // },
   {
     name: "Core peinciples",
     href: "/Corepeinciples",
@@ -87,7 +87,7 @@ const Aboutus = [
   },
   {
     name: "Our vision",
-    href: "/Corepeinciples",
+    href: "/OurVision",
     icon: ChartPieIcon,
   },
 ];
@@ -195,7 +195,7 @@ export default function NavBar() {
               className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
             >
               <div className="p-4">
-                {Blog.map((item) => (
+                {Aboutus.map((item) => (
                   <div
                     key={item.name}
                     className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"

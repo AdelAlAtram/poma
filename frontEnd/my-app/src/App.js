@@ -19,6 +19,9 @@ import POMAStories from "./hompage/POMAStories";
 import InTheirWords from "./hompage/InTheirWords";
 import Publications from "./hompage/Publications";
 import WhereWeWork from "./hompage/WhereWeWork";
+import AboutUs from "./hompage/AboutUs";
+import Corepeinciples from "./hompage/Corepeinciples";
+import OurVision from "./hompage/OurVision";
 
 function App() {
   return (
@@ -51,6 +54,9 @@ function App() {
           <Route path="/InTheirWords" element={<InTheirWords />} />
           <Route path="/Publications" element={<Publications />} />
           <Route path="/WhereWeWork" element={<WhereWeWork />} />
+          <Route path="/AboutUs" element={<AboutUs />} />
+          <Route path="/Corepeinciples" element={<Corepeinciples />} />
+          <Route path="/OurVision" element={<OurVision />} />
           <Route
             path="/OurWay"
             element={
