@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowDownIcon, ArrowRightIcon } from "@heroicons/react/24/outline"; // Importing only the down arrow icon
+import { ArrowDownIcon, ArrowRightIcon } from "@heroicons/react/24/outline"; // Importing the arrow icons
 import BackgroundImage from "./image/82.jpg";
 
 export default function DifferenceSection() {
@@ -17,21 +17,21 @@ export default function DifferenceSection() {
       />
 
       {/* Content Section */}
-      <div className="relative z-10 w-full px-4 sm:px-8 md:px-10 lg:px-16 grid grid-cols-1 sm:grid-cols-3 items-center justify-center h-full ">
+      <div className="relative z-10 w-full px-4 sm:px-8 md:px-10 lg:px-16 grid grid-cols-1 lg:grid-cols-[auto,1fr,4fr] items-center justify-center h-full">
         {/* Left Side Text */}
-        <div className="text-white text-center lg:text-left mb-4 lg:mb-0">
+        <div className="text-white text-center lg:text-left mb-4 lg:mb-0 max-w-[600px]">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 lg:mb-6">
             How we’re making a difference
           </h1>
         </div>
 
-        <div className="flex justify-center">
+        <div className="flex justify-center lg:justify-center">
           <ArrowDownIcon className="w-6 h-6 sm:w-10 sm:h-8 text-white absolute top-1/2 transform -translate-y-1/2 group-hover:opacity-0 transition-opacity duration-300 lg:hidden" />
           <ArrowRightIcon className="w-6 h-6 sm:w-10 sm:h-8 text-white absolute top-1/2 transform -translate-y-1/2 group-hover:opacity-0 transition-opacity duration-300 hidden lg:block" />
         </div>
 
         {/* Right Side Text */}
-        <div className="text-white  space-y-10 ml-auto flex flex-col items-center lg:items-start">
+        <div className="text-white space-y-10 ml-auto flex flex-col items-center lg:items-start">
           {/* Piece of Mind Association Section */}
           <div className="group relative text-center lg:text-left">
             <h2 className="text-xl sm:text-2xl md:text-3xl font-bold cursor-pointer relative inline-block">
@@ -40,7 +40,7 @@ export default function DifferenceSection() {
             <p className="text-base sm:text-lg md:text-xl leading-relaxed opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-screen group-hover:mt-2 transition-all duration-500 ease-in-out overflow-hidden">
               supports society's most vulnerable and those left behind, focusing
               on women, children, refugees, displaced persons, conflict zones,
-              and trauma-affected populations.
+              and trauma-affected populations. 
             </p>
           </div>
 
