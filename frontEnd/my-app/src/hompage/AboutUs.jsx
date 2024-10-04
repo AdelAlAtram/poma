@@ -1,137 +1,116 @@
 import React from "react";
-import MissionImage from "./image/IMG_0155.JPG";
-import MissionImag2 from "./image/IMG_0328.JPG";
+import MissionImage from "./image/81.jpg";
+import MissionImag2 from "./image/8.jpg";
+import MissionImag3 from "./image/79.jpg";
+import MissionImag4 from "./image/76.jpg";
 
 export default function AboutUs() {
   return (
     <>
-      <section className="relative bg-gradient-to-r from-[#8aeecf1b] to-[#8aeece4b] p-10 lg:p-20">
-        <h2 className="text-5xl font-extrabold text-center mb-16">About Us</h2>
-
-        {/* First Section */}
-        <div className="flex flex-col lg:flex-row items-center justify-between relative lg:space-x-8 mb-20">
-          <div className="lg:w-1/2 text-center lg:text-left mb-12 lg:mb-0 relative z-10">
-            <h2 className="text-4xl font-bold mb-6">
-              MENTAL HEALTH IS A FUNDAMENTAL RIGHT
-            </h2>
-            <p className="text-gray-700 mb-6 leading-relaxed">
-              it should be inclusive for all{" "}
-              <span style={{ fontWeight: "bold" }}>
-                We are dedicated to integrating all types of mental health care,
-                from preventive measures to comprehensive treatment
-              </span>
-            </p>
-          </div>
-          <div className="lg:w-1/2 relative">
-            <div className="w-[85%] mx-auto rounded-[50%] overflow-hidden relative transform rotate-3">
-              <img
-                src={MissionImage}
-                alt="Mission"
-                className="w-full h-auto object-cover shadow-lg transform hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-          </div>
+      {/* Full-Width Image with Text Overlay (1st Section) */}
+      <section
+        className="relative w-full h-[80vh] md:h-screen bg-cover bg-center"
+        style={{ backgroundImage: `url(${MissionImage})` }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <h2 className="text-4xl md:text-6xl font-extrabold text-white text-center">
+            Who We Are
+          </h2>
         </div>
+      </section>
 
-        {/* Second Section - Image on the Left */}
-        <div className="flex flex-col lg:flex-row items-center justify-between relative lg:space-x-8 mb-20 bg-white rounded-lg p-8 shadow-md">
-          <div className="lg:w-1/2 relative">
-            <div className="w-[85%] mx-auto rounded-[50%] overflow-hidden relative transform -rotate-3">
-              <img
-                src={MissionImag2}
-                alt="Mission"
-                className="w-full h-auto object-cover shadow-lg transform hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-          </div>
-          <div className="lg:w-1/2 text-center lg:text-left mt-12 lg:mt-0 relative z-10">
-            <h2 className="text-4xl font-bold mb-6">WE ARE A TEAM</h2>
-            <p className="text-gray-700 mb-6 leading-relaxed">
-              bringing together psychologists, professors, social workers,
-              providers, helpers, researchers, and communities working towards a
-              common objective: to provide psychological and mental health
-              support for all
-            </p>
-          </div>
-        </div>
-
-        {/* Third Section - Centered Image with Animation */}
-        <div className="text-center relative z-10 mb-20">
-          <h2 className="text-4xl font-bold mb-12">THROUGHOUT THE WORLD</h2>
-          <div className="w-[50%] mx-auto rounded-full overflow-hidden transform rotate-6 transition-transform duration-500 hover:scale-105">
-            <img
-              src={MissionImage}
-              alt="Our Values"
-              className="w-full h-auto object-cover shadow-lg"
-            />
-          </div>
-          <p className="text-gray-700 mt-10 leading-relaxed mx-auto lg:w-[50%]">
-            we have teams working collectively with communities, stakeholders,
-            advocates, policymakers, and providers to ensure the foundations of
-            clinical mental health are implemented safely and with quality
+      {/* Card Section with Title and Paragraph */}
+      <section className="bg-gray-100 py-12 md:py-24 px-6 md:px-10">
+        <div className="max-w-3xl mx-auto bg-white shadow-2xl rounded-xl p-6 md:p-10">
+          <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-6 text-gray-900">
+            MENTAL HEALTH IS A FUNDAMENTAL RIGHT
+          </h2>
+          <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+            It should be inclusive for all.
+            <br />
+            <span className="font-bold">
+              We are dedicated to integrating all types of mental health care,
+              from preventive measures to comprehensive treatment.
+            </span>
           </p>
         </div>
+      </section>
 
-        {/* Fourth Section - Text and Image Overlapping */}
-        <div className="flex flex-col lg:flex-row items-center justify-between relative lg:space-x-8 mb-20">
-          <div className="lg:w-1/2 text-center lg:text-left mb-12 lg:mb-0 relative z-10">
-            <h2 className="text-4xl font-bold mb-6">AT THE BEGINNING</h2>
-            <p className="text-gray-700 mb-6 leading-relaxed">
-              we began assisting those affected by conflict and ongoing
-              exposure to trauma
-            </p>
-          </div>
-          <div className="lg:w-1/2 relative">
-            <div className="w-[85%] mx-auto rounded-[50%] overflow-hidden relative transform rotate-6">
-              <img
-                src={MissionImag2}
-                alt="Commitment"
-                className="w-full h-auto object-cover shadow-lg transform hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-          </div>
+      {/* Full-Width Image with Text Overlay (2nd Section) */}
+      <section
+        className="relative w-full h-[80vh] md:h-screen bg-cover bg-center"
+        style={{ backgroundImage: `url(${MissionImag2})` }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center px-4">
+          <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-2 md:mb-4">
+            WE ARE A TEAM
+          </h2>
+          <p className="text-xl md:text-3xl font-extrabold text-white max-w-2xl md:max-w-4xl">
+            Bringing together psychologists, professors, social workers,
+            providers, helpers, researchers, and communities working towards a
+            common objective: to provide psychological and mental health support
+            for all.
+          </p>
         </div>
+      </section>
 
-        {/* Fifth Section - New Addition with Creative Background */}
-        <div className="flex flex-col lg:flex-row items-center justify-between relative lg:space-x-8 mb-20 bg-gray-50 rounded-lg p-8 shadow-md">
-          <div className="lg:w-1/2 text-center lg:text-left mb-12 lg:mb-0 relative z-10">
-            <h2 className="text-4xl font-bold mb-6">Our Approach</h2>
-            <p className="text-gray-700 mb-6 leading-relaxed">
-              Our approach is centered on innovation and collaboration. We
-              strive to create solutions that not only meet the needs of our
-              clients but also empower them to succeed in their endeavors.
-            </p>
-          </div>
-          <div className="lg:w-1/2 relative">
-            <div className="w-[85%] mx-auto rounded-[50%] overflow-hidden relative transform -rotate-6">
-              <img
-                src={MissionImage}
-                alt="Approach"
-                className="w-full h-auto object-cover shadow-lg transform hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-          </div>
+      {/* Card Section with Title and Paragraph */}
+      <section className="bg-gray-100 py-12 md:py-24 px-6 md:px-10">
+        <div className="max-w-3xl mx-auto bg-white shadow-2xl rounded-xl p-6 md:p-10">
+          <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-6 text-gray-900">
+            THROUGHOUT THE WORLD
+          </h2>
+          <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+            We have teams working collectively with communities, stakeholders,
+            advocates, policymakers, and providers to ensure the foundations of
+            clinical mental health are implemented safely and with quality.
+          </p>
         </div>
+      </section>
 
-        {/* New Creative Section with Overlapping Text and Image */}
-        <div className="relative flex flex-col lg:flex-row items-center justify-between lg:space-x-8 mb-20">
-          <div className="lg:w-1/2 text-center lg:text-left mb-12 lg:mb-0 relative z-10">
-            <h2 className="text-4xl font-bold mb-6">NOW</h2>
-            <p className="text-gray-700 mb-6 leading-relaxed">
-              Now we are exploring how we can collectively further contribute to
-              global mental health
-            </p>
-          </div>
-          <div className="lg:w-1/2 relative">
-            <div className="absolute inset-0  opacity-50 rounded-lg"></div>
-            <div className="w-[85%] mx-auto rounded-lg overflow-hidden relative z-10">
-              <img
-                src={MissionImag2}
-                alt="Innovative Solutions"
-                className="w-full h-auto object-cover shadow-lg transform hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-          </div>
+      {/* Full-Width Image with Text Overlay (4th Section) */}
+      <section
+        className="relative w-full h-[80vh] md:h-screen bg-cover bg-center"
+        style={{ backgroundImage: `url(${MissionImag3})` }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center px-4">
+          <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-2 md:mb-4">
+            AT THE BEGINNING
+          </h2>
+          <p className="text-xl md:text-3xl font-extrabold text-white max-w-2xl md:max-w-4xl">
+            We began assisting those affected by conflict and ongoing exposure
+            to trauma.
+          </p>
+        </div>
+      </section>
+
+      {/* Card Section with Title and Paragraph */}
+      <section className="bg-gray-100 py-12 md:py-24 px-6 md:px-10">
+        <div className="max-w-3xl mx-auto bg-white shadow-2xl rounded-xl p-6 md:p-10">
+          <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-6 text-gray-900">
+            Our Approach
+          </h2>
+          <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+            Our approach is centered on innovation and collaboration. We strive
+            to create solutions that not only meet the needs of our clients but
+            also empower them to succeed in their endeavors.
+          </p>
+        </div>
+      </section>
+
+      {/* Full-Width Image with Text Overlay (6th Section) */}
+      <section
+        className="relative w-full h-[80vh] md:h-screen bg-cover bg-center"
+        style={{ backgroundImage: `url(${MissionImag4})` }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center px-4">
+          <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-2 md:mb-4">
+            NOW
+          </h2>
+          <p className="text-xl md:text-3xl font-extrabold text-white max-w-2xl md:max-w-4xl">
+            Now we are exploring how we can collectively further contribute to
+            global mental health.
+          </p>
         </div>
       </section>
     </>

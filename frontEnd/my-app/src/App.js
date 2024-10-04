@@ -22,6 +22,7 @@ import WhereWeWork from "./hompage/WhereWeWork";
 import AboutUs from "./hompage/AboutUs";
 import Corepeinciples from "./hompage/Corepeinciples";
 import OurVision from "./hompage/OurVision";
+import TeamPage from "./hompage/OurTeam";
 
 function App() {
   return (
@@ -57,6 +58,7 @@ function App() {
           <Route path="/AboutUs" element={<AboutUs />} />
           <Route path="/Corepeinciples" element={<Corepeinciples />} />
           <Route path="/OurVision" element={<OurVision />} />
+          <Route path="/ourteam" element={<TeamPage />} />
           <Route
             path="/OurWay"
             element={

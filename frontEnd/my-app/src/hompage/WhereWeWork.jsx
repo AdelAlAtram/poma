@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { ComposableMap, Geographies, Geography, Marker } from "react-simple-maps";
+import {
+  ComposableMap,
+  Geographies,
+  Geography,
+  Marker,
+} from "react-simple-maps";
 
 const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json";
 
@@ -97,10 +102,10 @@ const getColor = (geo) => {
       return "#1E90FF"; // DodgerBlue for Ukraine
     case "Peru":
       return "#FF69B4"; // Hot Pink for Peru
-    case "USA":
+    case "United States of America":
       return "#83BDF7"; // Sky Blue for USA
     default:
-      return "#3ED0A1"; // Light grey for all other countries
+      return "lightgray"; // Light grey for all other countries
   }
 };
 
@@ -121,23 +126,38 @@ export default function WhereWeWork() {
   return (
     <div
       style={{
-        width: "100%",
-        height: "150vh",
+        width: "90%", // Reduced width for the main container
+        maxWidth: "1200px", // Maximum width for larger screens
+        height: "100vh",
         position: "relative",
         textAlign: "center",
-        backgroundColor: "#f5f5f5", // Light background color
+        // backgroundColor: "#f5f5f5", // Light background color
         padding: "20px",
         borderRadius: "8px",
-        boxShadow: "0 4px 20px rgba(0, 0, 0, 0.1)", // Box shadow for depth
+        // boxShadow: "0 4px 20px rgba(0, 0, 0, 0.1)", // Box shadow for depth
+        margin: "0 auto", // Center the container
       }}
     >
-      <h1 style={{ marginTop: "25px", fontSize: "35px", fontWeight: "bold", color: "#333" }}>
+      <h1
+        style={{
+          marginTop: "25px",
+          fontSize: "35px",
+          fontWeight: "bold",
+          color: "#333",
+        }}
+      >
         Where We Work
       </h1>
 
       {/* Conditionally render map or markers based on screen size */}
       {isMobile ? (
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
           {/* Mobile view - show only markers and their descriptions */}
           {markers.map(({ name, description }) => (
             <div
@@ -152,13 +172,15 @@ export default function WhereWeWork() {
                 textAlign: "left", // Left align text
               }}
             >
-              <h2 style={{ fontSize: "20px", margin: "0", color: "#FF6347" }}>{name}</h2>
+              <h2 style={{ fontSize: "20px", margin: "0", color: "#FF6347" }}>
+                {name}
+              </h2>
               <p style={{ margin: "5px 0", color: "#666" }}>{description}</p>
             </div>
           ))}
         </div>
       ) : (
-        <ComposableMap style={{ height: "100%" }}>
+        <ComposableMap style={{ height: "100%", width: "100%" }}>
           <Geographies geography={geoUrl}>
             {({ geographies }) =>
               geographies.map((geo) => (
@@ -167,6 +189,11 @@ export default function WhereWeWork() {
                   geography={geo}
                   fill={getColor(geo)} // Apply color based on country
                   stroke="#FFFFFF"
+                  style={{
+                    default: { outline: "none" },
+                    hover: { outline: "none" },
+                    pressed: { outline: "none" },
+                  }}
                 />
               ))
             }
@@ -178,7 +205,7 @@ export default function WhereWeWork() {
               onMouseEnter={() => setHoveredMarker(name)}
               onMouseLeave={() => setHoveredMarker(null)}
             >
-              <circle r={3} fill="black" />
+              <circle r={4} fill="black" /> {/* Dot marker */}
               <text
                 textAnchor="middle"
                 y={(() => {
@@ -211,12 +238,27 @@ export default function WhereWeWork() {
             transform: "translate(-50%, -50%)",
             padding: "5px 10px",
             backgroundColor: "#FFF",
-            border: "1px solid #CCC",
-            borderRadius: "5px",
-            zIndex: 10,
+            borderRadius: "8px",
+            boxShadow: "0 2px 10px rgba(0, 0, 0, 0.2)",
+            zIndex: 1000,
           }}
         >
-          {markers.find((marker) => marker.name === hoveredMarker).description}
+          <h3
+            style={{
+              margin: "0",
+              fontSize: "16px",
+              fontWeight: "bold",
+              color: "#FF6347",
+            }}
+          >
+            {hoveredMarker}
+          </h3>
+          <p style={{ margin: "5px 0", color: "#666" }}>
+            {
+              markers.find((marker) => marker.name === hoveredMarker)
+                ?.description
+            }
+          </p>
         </div>
       )}
     </div>

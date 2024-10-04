@@ -210,7 +210,6 @@ export default function NavBar() {
                       <a
                         href={item.href}
                         className="block font-semibold text-gray-900"
-                        onClick={(e) => e.preventDefault()}
                       >
                         {item.name}
                         <span className="absolute inset-0" />
@@ -370,7 +369,6 @@ export default function NavBar() {
                       <DisclosureButton
                         key={item.name}
                         as="a"
-                        onClick={(e) => e.preventDefault()}
                         href={item.href}
                         className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                       >
