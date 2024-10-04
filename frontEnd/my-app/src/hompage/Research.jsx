@@ -1,46 +1,53 @@
 import { motion } from "framer-motion";
-import Image from "./image/4.png"; // Adjust the path as needed
+import Image1 from "./image/research/1.jpg"; 
+import Image2 from "./image/research/10.jpg"; 
+import Image3 from "./image/research/21.jpg"; 
+import Image4 from "./image/research/101.jpg"; 
+import Image5 from "./image/research/102.jpg"; 
+import Image6 from "./image/research/103.jpg"; 
+import Image7 from "./image/research/104.jpg"; 
+import Image8 from "./image/research/107.jpg"; 
 
 const products = [
   {
     id: 1,
     text: "Local Data Collection Methods",
-    imageSrc: Image,
+    imageSrc: Image1,
   },
   {
     id: 1,
     text: "Evidence Informed",
-    imageSrc: Image,
+    imageSrc: Image2,
   },
   {
     id: 1,
     text: "Implementation Science",
-    imageSrc: Image,
+    imageSrc: Image3,
   },
   {
     id: 1,
     text: "Applied Evaluation Research",
-    imageSrc: Image,
+    imageSrc: Image4,
   },
   {
     id: 1,
     text: "Traumatization Prevention Training research teams",
-    imageSrc: Image,
+    imageSrc: Image5,
   },
   {
     id: 1,
     text: "Needs Assessment and Gap Analysis, Clinical Assessments",
-    imageSrc: Image,
+    imageSrc: Image6,
   },
   {
     id: 1,
     text: "Applied and Implementation Research",
-    imageSrc: Image,
+    imageSrc: Image7,
   },
   {
     id: 1,
     text: "Program Evaluation and Case Studies",
-    imageSrc: Image,
+    imageSrc: Image8,
   },
 ];
 

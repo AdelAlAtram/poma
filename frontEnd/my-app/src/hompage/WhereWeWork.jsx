@@ -178,34 +178,21 @@ export default function WhereWeWork() {
               onMouseEnter={() => setHoveredMarker(name)}
               onMouseLeave={() => setHoveredMarker(null)}
             >
-              <circle r={1} fill="black" />
+              <circle r={3} fill="black" />
               <text
                 textAnchor="middle"
                 y={(() => {
                   // Apply custom spacing for Switzerland, Poland, Ukraine
-                  if (name === "Switzerland" ) {
-                    return markerOffset + 30; // Adjust this to control spacing
-                  }
-                  if ( name === "Ukraine") {
-                    return markerOffset + 10; // Adjust this to control spacing
-                  }
-                  if ( name === "Poland" ) {
-                    return markerOffset + 4; // Adjust this to control spacing
-                  }
+                  if (name === "Switzerland") return markerOffset + 30;
+                  if (name === "Ukraine") return markerOffset + 10;
+                  if (name === "Poland") return markerOffset + 4;
                   // Apply custom spacing for Syria and Iraq
-                  if (name === "Syria" ) {
-                    return markerOffset + 5; // Adjust this to control spacing
-                  }
-                  if (name === "Iraq" ) {
-                    return markerOffset + 28; // Adjust this to control spacing
-                  }
+                  if (name === "Syria") return markerOffset + 5;
+                  if (name === "Iraq") return markerOffset + 28;
                   // Default offset for all other markers
                   return markerOffset;
                 })()}
-                style={{
-                  fontSize: 13,
-                  // fontWeight: "bold",
-                }}
+                style={{ fontSize: 13 }}
               >
                 {name}
               </text>

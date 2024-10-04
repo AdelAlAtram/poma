@@ -1,5 +1,12 @@
 import { motion } from "framer-motion";
-import Image from "./image/4.png"; // Adjust the path as needed
+import Image from "./image/4.png";
+import Image5 from "./image/conflict/shutterstock_2174639149.jpg";
+import Image8 from "./image/mh/WhatsApp Image 2021-11-30 at 13.54.38.jpeg";
+import Image4 from "./image/gbv/8C56A715-FFEE-4805-996E-59518A44AFE0_1_102_o.jpeg"; 
+import Image13 from "./image/mh/82.jpg";
+import Image2 from "./image/c2.jpg";
+
+
 
 const products = [
   {
@@ -10,27 +17,27 @@ const products = [
   {
     id: 1,
     text: "Reconciliation and Accountability",
-    imageSrc: Image,
+    imageSrc: Image5,
   },
   {
     id: 1,
     text: "Prevention of Human Trafficking",
-    imageSrc: Image,
+    imageSrc: Image8,
   },
   {
     id: 1,
     text: "Protection of Vulnerable Populations",
-    imageSrc: Image,
+    imageSrc: Image4,
   },
   {
     id: 1,
     text: "Cultural Rights",
-    imageSrc: Image,
+    imageSrc: Image13,
   },
   {
     id: 1,
     text: "Access to Justice",
-    imageSrc: Image,
+    imageSrc: Image2,
   },
 ];
 

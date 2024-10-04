@@ -1,36 +1,41 @@
 import { motion } from "framer-motion";
-import Image from "./image/4.png"; // Adjust the path as needed
+import Image1 from "./image/c1.jpg";
+import Image2 from "./image/c2.jpg";
+import Image3 from "./image/99.jpg";
+import Image4 from "./image/shutterstock_1898173294.jpg";
+import Image5 from "./image/shutterstock_2174639149.jpg";
+import Image6 from "./image/shutterstock_2373647011.jpg";
 
 const products = [
   {
     id: 1,
     text: "Early Childhood Development",
-    imageSrc: Image,
+    imageSrc: Image1,
   },
   {
     id: 1,
     text: "Child-Therapeutic Psychotherapy Development",
-    imageSrc: Image,
+    imageSrc: Image2,
   },
   {
     id: 1,
     text: "Family Mediation and Parental Support",
-    imageSrc: Image,
+    imageSrc: Image3,
   },
   {
     id: 1,
     text: "Child Rights",
-    imageSrc: Image,
+    imageSrc: Image4,
   },
   {
     id: 1,
     text: "Guidance on Global Standards for Child Care",
-    imageSrc: Image,
+    imageSrc: Image5,
   },
   {
     id: 1,
     text: "Monitoring and Evaluation of Child's Rights",
-    imageSrc: Image,
+    imageSrc: Image6,
   },
 ];
 

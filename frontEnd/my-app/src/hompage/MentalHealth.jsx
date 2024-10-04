@@ -1,76 +1,89 @@
 import { motion } from "framer-motion";
-import Image from "./image/4.png"; // Adjust the path as needed
+import Image1 from "./image/mh/34BAB5B2-E8B7-4775-A24D-4B67282B1C92 (1).png";
+import Image2 from "./image/mh/Screenshot 2024-07-21 101823.png";
+import Image3 from "./image/mh/Screenshot 2024-07-23 at 13.54.18.png";
+import Image4 from "./image/mh/shutterstock_53408203.jpg";
+import Image5 from "./image/mh/shutterstock_1643485159.jpg";
+import Image6 from "./image/mh/shutterstock_1832530570.jpg";
+import Image7 from "./image/mh/WhatsApp Image 2021-11-30 at 13.54.28.jpeg";
+import Image8 from "./image/mh/WhatsApp Image 2021-11-30 at 13.54.38.jpeg";
+import Image9 from "./image/mh/WhatsApp Image 2021-11-30 at 14.11.15.jpeg";
+import Image10 from "./image/mh/WhatsApp Image 2022-05-17 at 11.53.19 AM (2).jpeg";
+import Image11 from "./image/mh/shutterstock_2373647011.jpg";
+import Image12 from "./image/mh/4.png";
+import Image13 from "./image/mh/82.jpg";
+import Image14 from "./image/mh/IMG_0155.JPG";
 
 const products = [
   {
     id: 1,
     text: "Clinical Supervision and Capacity Building",
-    imageSrc: Image,
+    imageSrc: Image1,
   },
   {
     id: 1,
     text: "Strategy and Policy",
-    imageSrc: Image,
+    imageSrc: Image2,
   },
   {
     id: 1,
     text: "Mental Health Frameworks",
-    imageSrc: Image,
+    imageSrc: Image3,
   },
   {
     id: 1,
     text: "Mental Health Policies",
-    imageSrc: Image,
+    imageSrc: Image4,
   },
   {
     id: 1,
     text: "Mental Health System Development",
-    imageSrc: Image,
+    imageSrc: Image5,
   },
   {
     id: 1,
     text: "Standards of Practices for Mental Health",
-    imageSrc: Image,
+    imageSrc: Image6,
   },
   {
     id: 1,
     text: "Crisis Response",
-    imageSrc: Image,
+    imageSrc: Image7,
   },
   {
     id: 1,
     text: "Advocacy & Prevention Awareness",
-    imageSrc: Image,
+    imageSrc: Image8,
   },
   {
     id: 1,
     text: "Community Engagement",
-    imageSrc: Image,
+    imageSrc: Image9,
   },
   {
     id: 1,
     text: "Capacity Development and Training",
-    imageSrc: Image,
+    imageSrc: Image10,
   },
   {
     id: 1,
     text: "Technical Assistance, Review",
-    imageSrc: Image,
+    imageSrc: Image11,
   },
   {
     id: 1,
     text: "Vicarious Trauma and Providers MH Support",
-    imageSrc: Image,
+    imageSrc: Image12,
   },
   {
     id: 1,
     text: "Stakeholder Analysis and Mapping",
-    imageSrc: Image,
+    imageSrc: Image13,
   },
   {
     id: 1,
     text: "Establish Working Groups & Coordination Bodies",
-    imageSrc: Image,
+    imageSrc: Image14,
   },
 ];
 

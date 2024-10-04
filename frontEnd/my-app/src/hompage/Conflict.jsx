@@ -1,36 +1,42 @@
 import { motion } from "framer-motion";
-import Image from "./image/4.png"; // Adjust the path as needed
+import Image1 from "./image/conflict/DE49FA7E-0F88-449A-B5A9-11BA5C872AB3_1_105_c.jpeg";
+import Image2 from "./image/conflict/E4656BC0-1183-4A90-9A43-35E5F740D911_1_105_c.jpeg";
+import Image3 from "./image/conflict/EB29E03D-5D2D-4619-A6FB-405F241ACF1D_1_105_c.jpeg";
+import Image4 from "./image/conflict/ED5B1B16-C60F-4883-8348-16B45F4FF737_1_105_c.jpeg";
+import Image5 from "./image/conflict/shutterstock_2174639149.jpg";
+import Image6 from "./image/conflict/shutterstock_2373647011.jpg";
+
 
 const products = [
   {
     id: 1,
     text: "Reintegration and Reunification",
-    imageSrc: Image,
+    imageSrc: Image1,
   },
   {
     id: 1,
     text: "Psychological Rehabilitation for CAAFAG",
-    imageSrc: Image,
+    imageSrc: Image2,
   },
   {
     id: 1,
     text: "Post-release Support and Monitoring",
-    imageSrc: Image,
+    imageSrc: Image3,
   },
   {
     id: 1,
     text: "led Support Groups",
-    imageSrc: Image,
+    imageSrc: Image4,
   },
   {
     id: 1,
     text: "Juvenile Justice",
-    imageSrc: Image,
+    imageSrc: Image5,
   },
   {
     id: 1,
     text: "Law Enforcement Mental Health Informed Guidance",
-    imageSrc: Image,
+    imageSrc: Image6,
   },
 ];
 
