@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowDownIcon, ArrowRightIcon } from "@heroicons/react/24/outline"; // Importing the arrow icons
+import { ChevronDoubleDownIcon, ChevronDoubleRightIcon } from "@heroicons/react/24/outline"; // Importing the arrow icons
 import BackgroundImage from "./image/82.jpg";
 
 export default function DifferenceSection() {
@@ -26,8 +26,8 @@ export default function DifferenceSection() {
         </div>
 
         <div className="flex justify-center lg:justify-center">
-          <ArrowDownIcon className="w-6 h-6 sm:w-10 sm:h-8 text-white absolute top-1/2 transform -translate-y-1/2 group-hover:opacity-0 transition-opacity duration-300 lg:hidden" />
-          <ArrowRightIcon className="w-6 h-6 sm:w-10 sm:h-8 text-white absolute top-1/2 transform -translate-y-1/2 group-hover:opacity-0 transition-opacity duration-300 hidden lg:block" />
+          <ChevronDoubleDownIcon className="w-6 h-6 sm:w-10 sm:h-8 text-white absolute top-1/2 transform -translate-y-1/2 group-hover:opacity-0 transition-opacity duration-300 lg:hidden" />
+          <ChevronDoubleRightIcon className="w-6 h-6 sm:w-10 sm:h-10 text-white absolute top-1/2 transform -translate-y-1/2 group-hover:opacity-0 transition-opacity duration-300 hidden lg:block" />
         </div>
 
         {/* Right Side Text */}
