@@ -90,6 +90,11 @@ const Aboutus = [
     href: "/OurVision",
     icon: ChartPieIcon,
   },
+  {
+    name: "Community And Contribution",
+    href: "/communityandcontribution",
+    icon: ChartPieIcon,
+  },
 ];
 
 export default function NavBar() {
