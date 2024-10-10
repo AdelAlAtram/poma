@@ -23,13 +23,28 @@ import AboutUs from "./hompage/AboutUs";
 import Corepeinciples from "./hompage/Corepeinciples";
 import OurVision from "./hompage/OurVision";
 import TeamPage from "./hompage/OurTeam";
+import LoginForm from "./hompage/LoginForm";
+import Dashboard from "./hompage/Dashboard";
+import Teaminside from "./hompage/Teaminside";
+import Blogsinside from "./hompage/Bloginside";
+import Publicationsinside from "./hompage/Publicationsinside";
+
+// New Component for wrapping Dashboard routes with Sidebar
+const DashboardLayout = ({ children }) => {
+  return (
+    <div className="flex">
+      <Dashboard /> {/* Sidebar Component */}
+      <main className="flex-1 p-6">{children}</main> {/* Main content */}
+    </div>
+  );
+};
 
 function App() {
   return (
     <Router>
       <div>
-        <NavBar />
         <Routes>
+          {/* Public Routes */}
           <Route
             path="/"
             element={
@@ -39,11 +54,9 @@ function App() {
                 <ImageCut />
                 <InfoSection />
                 <DifferenceSection />
-                <Footer />
               </>
             }
           />
-          {/* Future Routes can be added here */}
           <Route path="/MentalHealth" element={<MentalHealth />} />
           <Route path="/ChildProtection" element={<ChildProtection />} />
           <Route path="/GBV" element={<GBV />} />
@@ -59,6 +72,43 @@ function App() {
           <Route path="/Corepeinciples" element={<Corepeinciples />} />
           <Route path="/OurVision" element={<OurVision />} />
           <Route path="/communityandcontribution" element={<TeamPage />} />
+          <Route path="/poma/admin/login" element={<LoginForm />} />
+
+          {/* Dashboard Routes - Wrapped with Sidebar */}
+          <Route
+            path="/Dashboard"
+            element={
+              <DashboardLayout>
+                <div>Dashboard Overview</div>
+              </DashboardLayout>
+            }
+          />
+          <Route
+            path="/Teaminside"
+            element={
+              <DashboardLayout>
+                <Teaminside />
+              </DashboardLayout>
+            }
+          />
+          <Route
+            path="/Bloginside"
+            element={
+              <DashboardLayout>
+                <Blogsinside />
+              </DashboardLayout>
+            }
+          />
+          <Route
+            path="/Publicationsinside"
+            element={
+              <DashboardLayout>
+                <Publicationsinside />
+              </DashboardLayout>
+            }
+          />
+
+          {/* Example Route for OurWay */}
           <Route
             path="/OurWay"
             element={
@@ -68,8 +118,9 @@ function App() {
               </>
             }
           />
-      
         </Routes>
+        {/* Optional Footer */}
+        {/* <Footer /> */}
       </div>
     </Router>
   );

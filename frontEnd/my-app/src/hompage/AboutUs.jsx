@@ -108,8 +108,8 @@ export default function AboutUs() {
             NOW
           </h2>
           <p className="text-xl md:text-3xl font-extrabold text-white max-w-2xl md:max-w-4xl">
-            Now we are exploring how we can collectively further contribute to
-            global mental health.
+            Now we are developing and implementing systems of care that meet
+            local need whilst aligning with global mental health standards
           </p>
         </div>
       </section>

@@ -26,6 +26,7 @@ const WhatweDo = [
     href: "/MentalHealth",
     icon: ChartPieIcon,
   },
+
   {
     name: "Child Protection & Social Policy",
     href: "/ChildProtection",
@@ -49,6 +50,11 @@ const WhatweDo = [
   {
     name: "Research",
     href: "/Research",
+    icon: ChartPieIcon,
+  },
+  {
+    name: "Where we work",
+    href: "/WhereWeWork",
     icon: ChartPieIcon,
   },
 ];
@@ -75,11 +81,11 @@ const Aboutus = [
     href: "/AboutUs",
     icon: ChartPieIcon,
   },
-  // {
-  //   name: "Philosophy",
-  //   href: "/Philosophy",
-  //   icon: ChartPieIcon,
-  // },
+  {
+    name: "Our Way",
+    href: "/OurWay",
+    icon: ChartPieIcon,
+  },
   {
     name: "Core peinciples",
     href: "/Corepeinciples",
@@ -91,7 +97,7 @@ const Aboutus = [
     icon: ChartPieIcon,
   },
   {
-    name: "Community And Contribution",
+    name: "Team And Community",
     href: "/communityandcontribution",
     icon: ChartPieIcon,
   },
@@ -133,60 +139,6 @@ export default function NavBar() {
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
             <PopoverButton className="flex items-center gap-x-1 text-md font-semibold leading-6 text-black focus:outline-none focus:ring-0">
-              WHAT WE DO
-              <ChevronDownIcon
-                aria-hidden="true"
-                className="h-5 w-5 flex-none"
-                style={{ color: "#3fd0a2" }}
-              />
-            </PopoverButton>
-
-            <PopoverPanel
-              transition
-              className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
-            >
-              <div className="p-4">
-                {WhatweDo.map((item) => (
-                  <div
-                    key={item.name}
-                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
-                  >
-                    <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                      <FaHandsHoldingChild
-                        aria-hidden="true"
-                        className="h-6 w-6 text-gray-600 group-hover:text-pomaGreen"
-                      />
-                    </div>
-                    <div className="flex-auto">
-                      <a
-                        href={item.href}
-                        className="block font-semibold text-gray-900"
-                      >
-                        {item.name}
-                        <span className="absolute inset-0" />
-                      </a>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </PopoverPanel>
-          </Popover>
-
-          <a
-            href="/OurWay"
-            className="text-md font-semibold leading-6 text-black "
-          >
-            Our Way
-          </a>
-          <a
-            href="/WhereWeWork"
-            className="text-md font-semibold leading-6 text-black "
-          >
-            Where we work
-          </a>
-
-          <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-md font-semibold leading-6 text-black focus:outline-none focus:ring-0">
               About us
               <ChevronDownIcon
                 aria-hidden="true"
@@ -226,6 +178,48 @@ export default function NavBar() {
               </div>
             </PopoverPanel>
           </Popover>
+
+          <Popover className="relative">
+            <PopoverButton className="flex items-center gap-x-1 text-md font-semibold leading-6 text-black focus:outline-none focus:ring-0">
+              What we do
+              <ChevronDownIcon
+                aria-hidden="true"
+                className="h-5 w-5 flex-none"
+                style={{ color: "#3fd0a2" }}
+              />
+            </PopoverButton>
+
+            <PopoverPanel
+              transition
+              className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+            >
+              <div className="p-4">
+                {WhatweDo.map((item) => (
+                  <div
+                    key={item.name}
+                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+                  >
+                    <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                      <FaHandsHoldingChild
+                        aria-hidden="true"
+                        className="h-6 w-6 text-gray-600 group-hover:text-pomaGreen"
+                      />
+                    </div>
+                    <div className="flex-auto">
+                      <a
+                        href={item.href}
+                        className="block font-semibold text-gray-900"
+                      >
+                        {item.name}
+                        <span className="absolute inset-0" />
+                      </a>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </PopoverPanel>
+          </Popover>
+
           <Popover className="relative">
             <PopoverButton className="flex items-center gap-x-1 text-md font-semibold leading-6 text-black focus:outline-none focus:ring-0">
               Blog
@@ -274,13 +268,13 @@ export default function NavBar() {
             Publications
           </a>
         </PopoverGroup>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+        {/* <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <MagnifyingGlassIcon
             aria-hidden="true"
             className="h-6 w-6 flex-none "
             style={{ color: "#3fd0a2" }}
           />
-        </div>
+        </div> */}
 
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <button
@@ -321,7 +315,7 @@ export default function NavBar() {
               <div className="space-y-2 py-6">
                 <Disclosure as="div" className="-mx-3">
                   <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                    WHAT WE DO
+                  What we do
                     <ChevronDownIcon
                       aria-hidden="true"
                       className="h-5 w-5 flex-none group-data-[open]:rotate-180"
@@ -382,19 +376,7 @@ export default function NavBar() {
                     ))}
                   </DisclosurePanel>
                 </Disclosure>
-                <a
-                  href="/OurWay"
-                  className="-mx-3 block rounded-lg px-3 py-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
 
-                >
-                  Our Way
-                </a>
-                <a
-                  href="/WhereWeWork"
-                   className="-mx-3 block rounded-lg px-3 py-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Where we work
-                </a>
                 <a
                   href="/Publications"
                   className="-mx-3 block rounded-lg px-3 py-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"

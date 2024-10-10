@@ -41,11 +41,14 @@ const TeamPage = () => {
             </a>
             <h2 className="text-2xl font-semibold text-gray-900 mb-2">
               {/* <a href="/lyla-schwartz" className="hover:underline"> */}
-                Lyla Schwartz
+              Lyla Schwartz
               {/* </a> */}
             </h2>
             <p className="text-gray-600">
-              Lyla is a critical psychologist practitioner and researcher with expertise in childhood trauma, gender-based violence, childhood abandonment, and war conflict trauma. She has worked in Haiti, South Africa, Iraq, and other regions.
+              Lyla is a critical psychologist practitioner and researcher with
+              expertise in childhood trauma, gender-based violence, childhood
+              abandonment, and war conflict trauma. She has worked in Haiti,
+              South Africa, Iraq, and other regions.
             </p>
           </div>
 
@@ -60,11 +63,13 @@ const TeamPage = () => {
             </a>
             <h2 className="text-2xl font-semibold text-gray-900 mb-2">
               {/* <a href="/elizabeth-klapheke" className="hover:underline"> */}
-                Elizabeth Klapheke
+              Elizabeth Klapheke
               {/* </a> */}
             </h2>
             <p className="text-gray-600">
-              Elizabeth is a Mental Health and Child Protection expert with over ten years of experience working across South Africa, Afghanistan, and Ukraine.
+              Elizabeth is a Mental Health and Child Protection expert with over
+              ten years of experience working across South Africa, Afghanistan,
+              and Ukraine.
             </p>
           </div>
 
@@ -79,22 +84,23 @@ const TeamPage = () => {
             </a>
             <h2 className="text-2xl font-semibold text-gray-900 mb-2">
               {/* <a href="/hannah-lane" className="hover:underline"> */}
-                Hannah Lane
+              Hannah Lane
               {/* </a> */}
             </h2>
             <p className="text-gray-600">
-              Hannah has managed projects for child protection and research in Syria, Ukraine, and Afghanistan.
+              Hannah has managed projects for child protection and research in
+              Syria, Ukraine, and Afghanistan.
             </p>
           </div>
 
           {/* Usman's Card */}
           <div className="bg-white rounded-lg shadow-lg transition-transform transform hover:scale-105 p-6 relative overflow-hidden">
             {/* <a href="/usman-shah"> */}
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF3-pHiZS6r5k7QfGhiB-73EOD2o2EQoj6XQ&s"
-                alt="Usman Shah"
-                className="rounded-lg mb-4 w-full h-48 object-cover"
-              />
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF3-pHiZS6r5k7QfGhiB-73EOD2o2EQoj6XQ&s"
+              alt="Usman Shah"
+              className="rounded-lg mb-4 w-full h-48 object-cover"
+            />
             {/* </a> */}
             <h2 className="text-2xl font-semibold text-gray-900 mb-2">
               <a href="/usman-shah" className="hover:underline">
@@ -102,7 +108,31 @@ const TeamPage = () => {
               </a>
             </h2>
             <p className="text-gray-600">
-              Usman is an international researcher who has led development projects in Syria, Afghanistan, and across conflict zones.
+              Usman is an international researcher who has led development
+              projects in Syria, Afghanistan, and across conflict zones.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-lg transition-transform transform hover:scale-105 p-6 relative overflow-hidden">
+            <a href="/fatima-jafari">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF3-pHiZS6r5k7QfGhiB-73EOD2o2EQoj6XQ&s"
+                alt="Fatima Jafari"
+                className="rounded-lg mb-4 w-full h-48 object-cover"
+              />
+            </a>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-2">
+              Fatima Jafari
+            </h2>
+            <p className="text-gray-600">
+              Fatima Jafari is a Mental Health Coach dedicated to advocacy and
+              education. She earned her undergraduate degree in Psychology from
+              Westminster College in the United States and has since contributed
+              to mental health awareness campaigns in Afghanistan, focusing on
+              stigma reduction and promoting well-being. For the past three
+              years, Fatima has worked on educational program development for
+              Afghan refugees in Tajikistan, training individuals in leadership,
+              skill-building, and mental health.
             </p>
           </div>
         </div>
@@ -115,7 +145,9 @@ const TeamPage = () => {
               Contact Us
             </h2>
             <p className="text-gray-600 mb-4">
-              To learn more about our work or enquire how we might work with your organization or team, contact us directly or fill out the form <br/> and we will get back to you promptly.
+              To learn more about our work or enquire how we might work with
+              your organization or team, contact us directly or fill out the
+              form <br /> and we will get back to you promptly.
             </p>
             <p className="text-gray-600">
               Address: 147 Wheelmeadow Drive, Longmeadow, Boston, MA 01106
@@ -123,15 +155,15 @@ const TeamPage = () => {
             <p className="text-gray-600">
               Gerichtlichkeitgassse 21, 3011 Bern, BE, Switzerland
             </p>
-            <p className="text-gray-600">
-              Afghanistan, Kabul
-            </p>
+            <p className="text-gray-600">Afghanistan, Kabul</p>
           </div>
 
           {/* Right Side: Contact Form */}
           <div className="md:w-1/2">
             <form onSubmit={handleSubmit} className="flex flex-col">
-              <label className="text-gray-700 mb-1" htmlFor="name">Name</label>
+              <label className="text-gray-700 mb-1" htmlFor="name">
+                Name
+              </label>
               <input
                 type="text"
                 name="name"
@@ -140,7 +172,9 @@ const TeamPage = () => {
                 required
                 className="border border-gray-300 rounded-lg p-2 mb-4"
               />
-              <label className="text-gray-700 mb-1" htmlFor="email">Email</label>
+              <label className="text-gray-700 mb-1" htmlFor="email">
+                Email
+              </label>
               <input
                 type="email"
                 name="email"
@@ -149,7 +183,9 @@ const TeamPage = () => {
                 required
                 className="border border-gray-300 rounded-lg p-2 mb-4"
               />
-              <label className="text-gray-700 mb-1" htmlFor="message">Message</label>
+              <label className="text-gray-700 mb-1" htmlFor="message">
+                Message
+              </label>
               <textarea
                 name="message"
                 value={formData.message}

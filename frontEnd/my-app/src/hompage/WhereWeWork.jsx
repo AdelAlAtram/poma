@@ -44,6 +44,23 @@ const markers = [
     description:
       "In South Africa, PoMA partnered with a government care agency to support the mental health needs of abandoned children or those removed from their families.",
   },
+
+  {
+    coordinates: [-72.2852, 18.9712], // Haiti
+    name: "Haiti",
+    description:
+      "In Haiti, a significant number of vulnerable families face challenges due to widespread poverty...",
+    color: "red",
+    markerOffset: 5,
+  },
+  {
+    coordinates: [78.9629, 20.5937], // India
+    name: "India",
+    description:
+      "In India, gender-based violence is a highly stigmatized and pervasive issue...",
+    color: "blue",
+    markerOffset: 10,
+  },
   {
     markerOffset: -15,
     name: "Switzerland",
@@ -104,8 +121,12 @@ const getColor = (geo) => {
       return "#FF69B4"; // Hot Pink for Peru
     case "United States of America":
       return "#83BDF7"; // Sky Blue for USA
+    case "Haiti":
+      return "red"; // Use red for high-severity or urgent issues
+    case "India":
+      return "blue"; // Use blue for medium-severity or focused efforts
     default:
-      return "lightgray"; // Light grey for all other countries
+      return "#3ED0A1"; // Light grey for all other countries
   }
 };
 
@@ -216,6 +237,8 @@ export default function WhereWeWork() {
                   // Apply custom spacing for Syria and Iraq
                   if (name === "Syria") return markerOffset + 5;
                   if (name === "Iraq") return markerOffset + 28;
+                  if (name === "Haiti") return markerOffset + 10;
+                  if (name === "India") return markerOffset - 20;
                   // Default offset for all other markers
                   return markerOffset;
                 })()}

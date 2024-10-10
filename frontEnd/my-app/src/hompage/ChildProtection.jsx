@@ -24,11 +24,6 @@ const products = [
   },
   {
     id: 1,
-    text: "Child Rights",
-    imageSrc: Image4,
-  },
-  {
-    id: 1,
     text: "Guidance on Global Standards for Child Care",
     imageSrc: Image5,
   },

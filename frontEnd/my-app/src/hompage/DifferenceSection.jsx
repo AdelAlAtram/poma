@@ -35,7 +35,7 @@ export default function DifferenceSection() {
           {/* Piece of Mind Association Section */}
           <div className="group relative text-center lg:text-left">
             <h2 className="text-xl sm:text-2xl md:text-3xl font-bold cursor-pointer relative inline-block">
-              <span>Piece of Mind Association</span>
+              <span>Peace of Mind Association</span>
             </h2>
             <p className="text-base sm:text-lg md:text-xl leading-relaxed opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-screen group-hover:mt-2 transition-all duration-500 ease-in-out overflow-hidden">
               supports society's most vulnerable and those left behind, focusing

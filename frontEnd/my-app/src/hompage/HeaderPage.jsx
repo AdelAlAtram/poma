@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "./image/2.jpg"; // Adjust the path as needed
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
-
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 export default function Header() {
   const [opacity, setOpacity] = useState(2); // Initial opacity
 
@@ -58,15 +58,31 @@ export default function Header() {
       />
 
       {/* Text content */}
+
       <div className="relative z-10 flex items-center h-full">
         <p
-          className="text-left text-white font-bold leading-snug p-6 tracking-wide bg-opacity-60  text-2xl sm:text-3xl md:text-4xl lg:text-5xl w-[90%] sm:w-[70%] md:w-[70%] lg:w-[52%] rounded-r-xl "
+          className="text-left text-white font-bold leading-snug p-6 tracking-wide bg-opacity-60 text-2xl sm:text-3xl md:text-4xl lg:text-5xl w-[90%] sm:w-[70%] md:w-[70%] lg:w-[55%] rounded-r-xl"
           style={{
             backgroundColor: "rgba(63, 208, 162, 0.23)",
           }}
         >
-          GLOBALLY, 1 in 8 people live with a mental health condition, with
-          suicide being the fourth leading cause of death among 15-29-year-olds
+          Globally,{" "}
+          <a
+            href="https://www.who.int/news-room/fact-sheets/detail/mental-disorders"
+            className="  no-underline"
+          >
+            1 in 8 people live with a mental health condition
+            <ArrowTopRightOnSquareIcon className="w-9 h-8 ml-2 inline " />
+          </a>
+          <br />
+          <a
+            href="https://www.who.int/publications/i/item/9789240026643"
+            className="no-underline"
+          >
+            with suicide being the fourth leading cause of death among
+            15-29-year-olds
+            <ArrowTopRightOnSquareIcon className="w-9 h-8 ml-2 inline " />
+          </a>
         </p>
       </div>
 
