@@ -32,12 +32,14 @@ export default function OurVision() {
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 mb-8 md:mb-16 text-center">
           Our Vision
         </h2>
+        
+        {/* Word Cloud */}
         <div className="flex flex-wrap justify-center">
           {visionPrinciples.map((principle, index) => (
             <motion.div
               key={index}
-              className={`m-2 md:m-4 font-semibold text-center transition-transform duration-300 p-3 md:p-4 rounded-full shadow-lg ${getTextStyle(index)}`}
-              whileHover={{ scale: 1.1, rotate: 3 }}
+              className={`m-2 p-3 font-semibold text-center rounded-full transition-transform ${getRandomTextStyle()}`}
+              whileHover={{ scale: 1.1, rotate: getRandomRotation() }} // Rotation effect
             >
               {principle}
             </motion.div>
@@ -82,19 +84,13 @@ export default function OurVision() {
   );
 }
 
-// Function to return different text styles
-const getTextStyle = (index) => {
+// Function to return random text sizes and colors
+const getRandomTextStyle = () => {
   const sizes = [
     "text-2xl md:text-3xl",
-    "text-3xl md:text-4xl",
     "text-4xl md:text-5xl",
     "text-xl md:text-2xl",
-    "text-2xl md:text-3xl",
     "text-3xl md:text-4xl",
-    "text-2xl md:text-3xl",
-    "text-xl md:text-2xl",
-    "text-3xl md:text-4xl",
-    "text-4xl md:text-5xl",
   ];
   const colors = [
     "text-yellow-600 bg-white",
@@ -104,10 +100,17 @@ const getTextStyle = (index) => {
     "text-purple-600 bg-white",
     "text-red-600 bg-white",
     "text-teal-600 bg-white",
-    "text-orange-600 bg-white",
-    "text-indigo-600 bg-white",
-    "text-gray-600 bg-white",
   ];
 
-  return `${sizes[index]} ${colors[index]} hover:bg-opacity-80`;
+  // Randomly select text size and color
+  const randomSize = sizes[Math.floor(Math.random() * sizes.length)];
+  const randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+  return `${randomSize} ${randomColor} hover:bg-opacity-80`;
+};
+
+// Function to return random rotation for the word cloud effect
+const getRandomRotation = () => {
+  const rotations = [-5, 5, -10, 10, 0];
+  return rotations[Math.floor(Math.random() * rotations.length)];
 };

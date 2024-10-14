@@ -8,14 +8,12 @@ import InfoSection from "./hompage/InfoSection";
 import NavBar from "./hompage/NavBar";
 import MentalHealth from "./hompage/MentalHealth";
 import ChildProtection from "./hompage/ChildProtection";
-import GBV from "./hompage/GBV";
 import Conflict from "./hompage/Conflict";
 import HumanRights from "./hompage/HumanRights";
 import Research from "./hompage/Research";
 import OurWay from "./hompage/OurWay";
 import SecInOurWay from "./hompage/SecInOurWay";
 import News from "./hompage/News";
-import POMAStories from "./hompage/POMAStories";
 import InTheirWords from "./hompage/InTheirWords";
 import Publications from "./hompage/Publications";
 import WhereWeWork from "./hompage/WhereWeWork";
@@ -29,7 +27,20 @@ import Teaminside from "./hompage/Teaminside";
 import Blogsinside from "./hompage/Bloginside";
 import Publicationsinside from "./hompage/Publicationsinside";
 
-// New Component for wrapping Dashboard routes with Sidebar
+import ProtectedRoute from "./components/ProtectedRoute"; // Import the ProtectedRoute component
+
+// Layout for public pages with NavBar and Footer
+const MainLayout = ({ children }) => {
+  return (
+    <>
+      <NavBar /> {/* Include Navbar in the main layout */}
+      {children}
+      <Footer /> {/* Include Footer in the main layout */}
+    </>
+  );
+};
+
+// Dashboard layout remains the same for pages without NavBar and Footer
 const DashboardLayout = ({ children }) => {
   return (
     <div className="flex">
@@ -42,86 +53,186 @@ const DashboardLayout = ({ children }) => {
 function App() {
   return (
     <Router>
-      <div>
-        <Routes>
-          {/* Public Routes */}
-          <Route
-            path="/"
-            element={
-              <>
-                <Header />
-                <HeaderContent />
-                <ImageCut />
-                <InfoSection />
-                <DifferenceSection />
-              </>
-            }
-          />
-          <Route path="/MentalHealth" element={<MentalHealth />} />
-          <Route path="/ChildProtection" element={<ChildProtection />} />
-          <Route path="/GBV" element={<GBV />} />
-          <Route path="/Conflict" element={<Conflict />} />
-          <Route path="/HumanRights" element={<HumanRights />} />
-          <Route path="/Research" element={<Research />} />
-          <Route path="/News" element={<News />} />
-          <Route path="/POMAStories" element={<POMAStories />} />
-          <Route path="/InTheirWords" element={<InTheirWords />} />
-          <Route path="/Publications" element={<Publications />} />
-          <Route path="/WhereWeWork" element={<WhereWeWork />} />
-          <Route path="/AboutUs" element={<AboutUs />} />
-          <Route path="/Corepeinciples" element={<Corepeinciples />} />
-          <Route path="/OurVision" element={<OurVision />} />
-          <Route path="/communityandcontribution" element={<TeamPage />} />
-          <Route path="/poma/admin/login" element={<LoginForm />} />
+      <Routes>
+        {/* Public Routes - Wrapped with MainLayout */}
+        <Route
+          path="/"
+          element={
+            <MainLayout>
+              <Header />
+              <HeaderContent />
+              <ImageCut />
+              <InfoSection />
+              <DifferenceSection />
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/MentalHealth"
+          element={
+            <MainLayout>
+              <MentalHealth />
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/ChildProtection"
+          element={
+            <MainLayout>
+              <ChildProtection />
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/Conflict"
+          element={
+            <MainLayout>
+              <Conflict />
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/HumanRights"
+          element={
+            <MainLayout>
+              <HumanRights />
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/Research"
+          element={
+            <MainLayout>
+              <Research />
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/Blogs"
+          element={
+            <MainLayout>
+              <News />
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/InTheirWords"
+          element={
+            <MainLayout>
+              <InTheirWords />
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/Publications"
+          element={
+            <MainLayout>
+              <Publications />
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/WhereWeWork"
+          element={
+            <MainLayout>
+              <WhereWeWork />
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/AboutUs"
+          element={
+            <MainLayout>
+              <AboutUs />
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/Corepeinciples"
+          element={
+            <MainLayout>
+              <Corepeinciples />
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/OurVision"
+          element={
+            <MainLayout>
+              <OurVision />
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/communityandcontribution"
+          element={
+            <MainLayout>
+              <TeamPage />
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/poma/admin/login"
+          element={
+            <MainLayout>
+              <LoginForm />
+            </MainLayout>
+          }
+        />
 
-          {/* Dashboard Routes - Wrapped with Sidebar */}
-          <Route
-            path="/Dashboard"
-            element={
-              <DashboardLayout>
-                <div>Dashboard Overview</div>
-              </DashboardLayout>
-            }
-          />
-          <Route
-            path="/Teaminside"
-            element={
+        {/* Protected Dashboard Routes - Wrapped with ProtectedRoute and DashboardLayout */}
+        <Route
+          path="/Dashboard"
+          element={
+            <ProtectedRoute>
               <DashboardLayout>
                 <Teaminside />
               </DashboardLayout>
-            }
-          />
-          <Route
-            path="/Bloginside"
-            element={
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/Teaminside"
+          element={
+            <ProtectedRoute>
+              <DashboardLayout>
+                <Teaminside />
+              </DashboardLayout>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/Bloginside"
+          element={
+            <ProtectedRoute>
               <DashboardLayout>
                 <Blogsinside />
               </DashboardLayout>
-            }
-          />
-          <Route
-            path="/Publicationsinside"
-            element={
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/Publicationsinside"
+          element={
+            <ProtectedRoute>
               <DashboardLayout>
                 <Publicationsinside />
               </DashboardLayout>
-            }
-          />
+            </ProtectedRoute>
+          }
+        />
 
-          {/* Example Route for OurWay */}
-          <Route
-            path="/OurWay"
-            element={
-              <>
-                <OurWay />
-                <SecInOurWay />
-              </>
-            }
-          />
-        </Routes>
-        {/* Optional Footer */}
-        {/* <Footer /> */}
-      </div>
+        {/* Example Route for OurWay, keeping the NavBar and Footer */}
+        <Route
+          path="/OurWay"
+          element={
+            <MainLayout>
+              <OurWay />
+              <SecInOurWay />
+            </MainLayout>
+          }
+        />
+      </Routes>
     </Router>
   );
 }

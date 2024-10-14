@@ -1,8 +1,5 @@
-import React, { useState } from "react";
-import ElizabethImg from "./image/81.jpg";
-import HannahImg from "./image/8.jpg";
-import UsmanImg from "./image/79.jpg";
-import LylaImg from "./image/82.jpg";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 const TeamPage = () => {
   const [formData, setFormData] = useState({
@@ -10,6 +7,7 @@ const TeamPage = () => {
     email: "",
     message: "",
   });
+  const [teamMembers, setTeamMembers] = useState([]);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -21,6 +19,20 @@ const TeamPage = () => {
     console.log(formData);
   };
 
+  const fetchTeamMembers = async () => {
+    try {
+      const response = await axios.get("http://localhost:5000/team/members");
+      setTeamMembers(response.data); // Assuming response.data is an array of team members
+    } catch (error) {
+      console.error("Error fetching team members:", error);
+    }
+  };
+
+  // Fetch team members when component mounts
+  useEffect(() => {
+    fetchTeamMembers();
+  }, []);
+
   return (
     <div className="bg-gray-100 min-h-screen py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -29,112 +41,23 @@ const TeamPage = () => {
         </h1>
 
         {/* Team Member Cards */}
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {/* Lyla's Card */}
-          <div className="bg-white rounded-lg shadow-lg transition-transform transform hover:scale-105 p-6 relative overflow-hidden">
-            <a href="/lyla-schwartz">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF3-pHiZS6r5k7QfGhiB-73EOD2o2EQoj6XQ&s"
-                alt="Lyla Schwartz"
-                className="rounded-lg mb-4 w-full h-48 object-cover"
-              />
-            </a>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-2">
-              {/* <a href="/lyla-schwartz" className="hover:underline"> */}
-              Lyla Schwartz
-              {/* </a> */}
-            </h2>
-            <p className="text-gray-600">
-              Lyla is a critical psychologist practitioner and researcher with
-              expertise in childhood trauma, gender-based violence, childhood
-              abandonment, and war conflict trauma. She has worked in Haiti,
-              South Africa, Iraq, and other regions.
-            </p>
-          </div>
-
-          {/* Elizabeth's Card */}
-          <div className="bg-white rounded-lg shadow-lg transition-transform transform hover:scale-105 p-6 relative overflow-hidden">
-            <a href="/elizabeth-klapheke">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF3-pHiZS6r5k7QfGhiB-73EOD2o2EQoj6XQ&s"
-                alt="Elizabeth Klapheke"
-                className="rounded-lg mb-4 w-full h-48 object-cover"
-              />
-            </a>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-2">
-              {/* <a href="/elizabeth-klapheke" className="hover:underline"> */}
-              Elizabeth Klapheke
-              {/* </a> */}
-            </h2>
-            <p className="text-gray-600">
-              Elizabeth is a Mental Health and Child Protection expert with over
-              ten years of experience working across South Africa, Afghanistan,
-              and Ukraine.
-            </p>
-          </div>
-
-          {/* Hannah's Card */}
-          <div className="bg-white rounded-lg shadow-lg transition-transform transform hover:scale-105 p-6 relative overflow-hidden">
-            <a href="/hannah-lane">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF3-pHiZS6r5k7QfGhiB-73EOD2o2EQoj6XQ&s"
-                alt="Hannah Lane"
-                className="rounded-lg mb-4 w-full h-48 object-cover"
-              />
-            </a>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-2">
-              {/* <a href="/hannah-lane" className="hover:underline"> */}
-              Hannah Lane
-              {/* </a> */}
-            </h2>
-            <p className="text-gray-600">
-              Hannah has managed projects for child protection and research in
-              Syria, Ukraine, and Afghanistan.
-            </p>
-          </div>
-
-          {/* Usman's Card */}
-          <div className="bg-white rounded-lg shadow-lg transition-transform transform hover:scale-105 p-6 relative overflow-hidden">
-            {/* <a href="/usman-shah"> */}
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF3-pHiZS6r5k7QfGhiB-73EOD2o2EQoj6XQ&s"
-              alt="Usman Shah"
-              className="rounded-lg mb-4 w-full h-48 object-cover"
-            />
-            {/* </a> */}
-            <h2 className="text-2xl font-semibold text-gray-900 mb-2">
-              <a href="/usman-shah" className="hover:underline">
-                Usman Shah
+          {teamMembers?.teamMembers?.map((team) => (
+            <div className="bg-white rounded-lg shadow-lg transition-transform transform hover:scale-105 p-6 relative overflow-hidden">
+              <a href="/lyla-schwartz">
+                <img
+                  src={team?.imageUrl}
+                  alt="Lyla Schwartz"
+                  className="rounded-lg mb-4 w-full h-48 object-cover"
+                />
               </a>
-            </h2>
-            <p className="text-gray-600">
-              Usman is an international researcher who has led development
-              projects in Syria, Afghanistan, and across conflict zones.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-lg transition-transform transform hover:scale-105 p-6 relative overflow-hidden">
-            <a href="/fatima-jafari">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF3-pHiZS6r5k7QfGhiB-73EOD2o2EQoj6XQ&s"
-                alt="Fatima Jafari"
-                className="rounded-lg mb-4 w-full h-48 object-cover"
-              />
-            </a>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-2">
-              Fatima Jafari
-            </h2>
-            <p className="text-gray-600">
-              Fatima Jafari is a Mental Health Coach dedicated to advocacy and
-              education. She earned her undergraduate degree in Psychology from
-              Westminster College in the United States and has since contributed
-              to mental health awareness campaigns in Afghanistan, focusing on
-              stigma reduction and promoting well-being. For the past three
-              years, Fatima has worked on educational program development for
-              Afghan refugees in Tajikistan, training individuals in leadership,
-              skill-building, and mental health.
-            </p>
-          </div>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-2">
+                {team?.name}
+              </h2>
+              <p className="text-gray-600">{team?.description}</p>
+            </div>
+          ))}
         </div>
 
         {/* Contact Section */}

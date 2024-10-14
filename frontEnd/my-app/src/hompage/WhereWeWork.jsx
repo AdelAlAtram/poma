@@ -132,7 +132,9 @@ const getColor = (geo) => {
 
 export default function WhereWeWork() {
   const [hoveredMarker, setHoveredMarker] = useState(null);
+  const [selectedMarker, setSelectedMarker] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // Check for mobile size
+  console.log("sdsdsd", selectedMarker);
 
   // Update state on resize
   useEffect(() => {
@@ -226,7 +228,7 @@ export default function WhereWeWork() {
               onMouseEnter={() => setHoveredMarker(name)}
               onMouseLeave={() => setHoveredMarker(null)}
             >
-              <circle r={4} fill="black" /> {/* Dot marker */}
+              <circle r={5} fill="black" /> {/* Dot marker */}
               <text
                 textAnchor="middle"
                 y={(() => {
@@ -256,7 +258,10 @@ export default function WhereWeWork() {
         <div
           style={{
             position: "absolute",
-            top: "50%", // Adjust this value for your layout
+
+            top: ["Libya", "Haiti", "India", "Iraq"].includes(hoveredMarker)
+              ? "60%"
+              : "50%", // Adjust this value for your layout
             left: "50%", // Adjust this value for your layout
             transform: "translate(-50%, -50%)",
             padding: "5px 10px",

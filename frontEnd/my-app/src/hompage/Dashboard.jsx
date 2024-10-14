@@ -4,6 +4,7 @@ import {
   UsersIcon,
   BookOpenIcon,
   ChartBarIcon,
+  
 } from "@heroicons/react/24/outline"; // Import new icons
 
 const Dashboard = () => {
@@ -36,6 +37,15 @@ const Dashboard = () => {
             <Link to="/Bloginside" className="flex items-center space-x-2">
               <BookOpenIcon className="h-6 w-6" />
               <span>Blogs</span>
+            </Link>
+          </li>
+          <li className="hover:bg-gray-700 p-2 rounded-md">
+            <Link
+              to="/Publicationsinside"
+              className="flex items-center space-x-2"
+            >
+              <ChartBarIcon className="h-6 w-6" />
+              <span>Publications</span>
             </Link>
           </li>
           <li className="hover:bg-gray-700 p-2 rounded-md">

@@ -17,7 +17,7 @@ export default function Publications() {
       </div>
 
       {/* Text and Button Section */}
-      <div className="flex flex-col sm:flex-row items-center justify-between w-full sm:w-3/4 md:w-2/3 lg:w-1/2 mt-16">
+      <div className="flex flex-col sm:flex-row items-center justify-between w-full sm:w-3/4 md:w-2/3 lg:w-1/2 mt-16 mb-24">
         <p className="text-xs sm:text-sm md:text-base font-bold text-center sm:text-left uppercase">
           Economic constraints and gendered rules:{" "}
           <span style={{ color: "lightgray" }}>
@@ -25,7 +25,7 @@ export default function Publications() {
           </span>
         </p>
         <button className="bg-purple-600 text-white font-bold py-2 px-4 sm:ml-4 sm:mt-[-10px] mt-4 rounded-full text-xs sm:text-sm">
-          BUTTON
+          Link
         </button>
       </div>
     </div>

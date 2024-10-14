@@ -22,63 +22,69 @@ import { FaHandsHoldingChild } from "react-icons/fa6";
 import Logo from "./image/Logo.png";
 const WhatweDo = [
   {
-    name: "Mental Health & Psychology Development",
+    name: "Mental Health Development",
     href: "/MentalHealth",
     icon: ChartPieIcon,
   },
 
   {
-    name: "Child Protection & Social Policy",
+    name: "Child And Social Policy & Practice",
     href: "/ChildProtection",
     icon: ChartPieIcon,
   },
+  // {
+  //   name: "Gender And Gender-based Violence (GBV)",
+  //   href: "/GBV",
+  //   icon: ChartPieIcon,
+  // },
+  // {
+  //   name: "Conflict",
+  //   href: "/Conflict",
+  //   icon: ChartPieIcon,
+  // },
   {
-    name: "Gender and Gender-based Violence (GBV)",
-    href: "/GBV",
-    icon: ChartPieIcon,
-  },
-  {
-    name: "Conflict",
-    href: "/Conflict",
-    icon: ChartPieIcon,
-  },
-  {
-    name: "Human Rights",
+    name: "Human Rights & Justice & Peace",
     href: "/HumanRights",
     icon: ChartPieIcon,
   },
   {
-    name: "Research",
+    name: "Research & Evidence Informed Evaluations",
     href: "/Research",
     icon: ChartPieIcon,
   },
   {
-    name: "Where we work",
+    name: "Where We Work",
     href: "/WhereWeWork",
     icon: ChartPieIcon,
   },
 ];
 const Blog = [
   {
-    name: "News and current events",
-    href: "/News",
+    name: "Publications",
+    href: "/Publications",
     icon: ChartPieIcon,
   },
   {
-    name: "POMA's Stories",
+    name: "Blogs",
+    href: "/Blogs",
+    icon: ChartPieIcon,
+  },
+  {
+    name: "Updates And Info",
     href: "/POMAStories",
     icon: ChartPieIcon,
   },
-  {
-    name: "In their words",
-    href: "/InTheirWords",
-    icon: ChartPieIcon,
-  },
+  
 ];
 const Aboutus = [
   {
-    name: "Who we are",
+    name: "Who We Are",
     href: "/AboutUs",
+    icon: ChartPieIcon,
+  },
+  {
+    name: "Our vision",
+    href: "/OurVision",
     icon: ChartPieIcon,
   },
   {
@@ -91,11 +97,7 @@ const Aboutus = [
     href: "/Corepeinciples",
     icon: ChartPieIcon,
   },
-  {
-    name: "Our vision",
-    href: "/OurVision",
-    icon: ChartPieIcon,
-  },
+
   {
     name: "Team And Community",
     href: "/communityandcontribution",
@@ -136,7 +138,7 @@ export default function NavBar() {
             <Bars3Icon aria-hidden="true" className="h-6 w-6" />
           </button>
         </div>
-        <PopoverGroup className="hidden lg:flex lg:gap-x-12">
+        <PopoverGroup className="hidden lg:flex lg:gap-x-20">
           <Popover className="relative">
             <PopoverButton className="flex items-center gap-x-1 text-md font-semibold leading-6 text-black focus:outline-none focus:ring-0">
               About us
@@ -181,7 +183,7 @@ export default function NavBar() {
 
           <Popover className="relative">
             <PopoverButton className="flex items-center gap-x-1 text-md font-semibold leading-6 text-black focus:outline-none focus:ring-0">
-              What we do
+              What we do & impact
               <ChevronDownIcon
                 aria-hidden="true"
                 className="h-5 w-5 flex-none"
@@ -222,7 +224,7 @@ export default function NavBar() {
 
           <Popover className="relative">
             <PopoverButton className="flex items-center gap-x-1 text-md font-semibold leading-6 text-black focus:outline-none focus:ring-0">
-              Blog
+              Resources
               <ChevronDownIcon
                 aria-hidden="true"
                 className="h-5 w-5 flex-none "
@@ -261,20 +263,7 @@ export default function NavBar() {
               </div>
             </PopoverPanel>
           </Popover>
-          <a
-            href="/Publications"
-            className="text-md font-semibold leading-6 text-black "
-          >
-            Publications
-          </a>
         </PopoverGroup>
-        {/* <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <MagnifyingGlassIcon
-            aria-hidden="true"
-            className="h-6 w-6 flex-none "
-            style={{ color: "#3fd0a2" }}
-          />
-        </div> */}
 
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <button
@@ -315,7 +304,7 @@ export default function NavBar() {
               <div className="space-y-2 py-6">
                 <Disclosure as="div" className="-mx-3">
                   <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                  What we do
+                    What we do & impact
                     <ChevronDownIcon
                       aria-hidden="true"
                       className="h-5 w-5 flex-none group-data-[open]:rotate-180"
@@ -336,7 +325,7 @@ export default function NavBar() {
                 </Disclosure>
                 <Disclosure as="div" className="-mx-3">
                   <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                    Blog
+                    Resources
                     <ChevronDownIcon
                       aria-hidden="true"
                       className="h-5 w-5 flex-none group-data-[open]:rotate-180"
@@ -376,13 +365,6 @@ export default function NavBar() {
                     ))}
                   </DisclosurePanel>
                 </Disclosure>
-
-                <a
-                  href="/Publications"
-                  className="-mx-3 block rounded-lg px-3 py-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Publications
-                </a>
               </div>
               <div className="py-6">
                 <button
