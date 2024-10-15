@@ -23,9 +23,7 @@ exports.createUser = async (req, res) => {
       return res.status(400).json({ message: "User already exists" });
     }
 
-    // Hash the password before saving
-    // const hashedPassword = await hashPassword(password);
-     // Log the hashed password
+
 
     // Create a new user with the hashed password
     user = new User({
@@ -59,13 +57,10 @@ exports.login = async (req, res) => {
       return res.status(400).json({ message: "Invalid email or password" });
     }
 
-    // Log the hashed password from the database
-    console.log("Password from DB:", user.password);
 
     // Compare passwords (trim the input password)
     const isMatch = await bcrypt.compare(password.trim(), user.password);
-    console.log("Input Password:", password); // Log the input password
-    console.log("Password match:", isMatch); // Log the result of the comparison
+
 
     if (!isMatch) {
       return res.status(400).json({ message: "Invalid email or password" });
