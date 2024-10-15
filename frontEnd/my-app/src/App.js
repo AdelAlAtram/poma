@@ -28,6 +28,7 @@ import Blogsinside from "./hompage/Bloginside";
 import Publicationsinside from "./hompage/Publicationsinside";
 
 import ProtectedRoute from "./components/ProtectedRoute"; // Import the ProtectedRoute component
+import UpdatesAndInfoInside from "./hompage/UpdatesAndInfoInside";
 
 // Layout for public pages with NavBar and Footer
 const MainLayout = ({ children }) => {
@@ -109,6 +110,14 @@ function App() {
         />
         <Route
           path="/Blogs"
+          element={
+            <MainLayout>
+              <News />
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/updatesandinfo"
           element={
             <MainLayout>
               <News />
@@ -217,6 +226,16 @@ function App() {
             <ProtectedRoute>
               <DashboardLayout>
                 <Publicationsinside />
+              </DashboardLayout>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/updatesandinfo"
+          element={
+            <ProtectedRoute>
+              <DashboardLayout>
+                <UpdatesAndInfoInside />
               </DashboardLayout>
             </ProtectedRoute>
           }

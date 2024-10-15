@@ -71,7 +71,7 @@ const Blog = [
   },
   {
     name: "Updates And Info",
-    href: "/POMAStories",
+    href: "/updatesandinfo",
     icon: ChartPieIcon,
   },
   
