@@ -13,18 +13,6 @@ exports.createSupport = async (req, res) => {
     const Supportdata = new Support(SupportData);
     await Supportdata.save();
 
-    // Mail options
-    // const mailOptions = {
-    //   from: "yourgmail@gmail.com", // Sender address
-    //   to: "adelaaymann@gmail.com", // Recipient address
-    //   subject: "New Support Message",
-    //   text: `You have a new support message from ${SupportData.name} (${SupportData.email}):\n\n${SupportData.message}`,
-    // };
-
-    // Send the email
-    // await transporter.sendMail(mailOptions);
-
-    // Send response after successful save and email send
     res.status(201).json(Supportdata);
   } catch (error) {
     console.error("Error creating Support:", error);
@@ -35,7 +23,7 @@ exports.createSupport = async (req, res) => {
 
 exports.getSupports = async (req, res) => {
   try {
-    const Supports = await Support.find();
+    const Supports = await Support.find().sort({ createdAt: -1 })
     res.status(200).json({ Supports });
   } catch (error) {
     res.status(500).json({
