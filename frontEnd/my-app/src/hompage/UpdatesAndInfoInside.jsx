@@ -35,7 +35,6 @@ const UpdatesAndInfoInside = () => {
       console.error("Error fetching updatesandinfo:", error);
     }
   };
-  console.log(updatesandinfo);
 
   // Fetch updatesandinfo when component mounts
   useEffect(() => {

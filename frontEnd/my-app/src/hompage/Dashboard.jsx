@@ -5,7 +5,8 @@ import {
   BookOpenIcon,
   ChartBarIcon,
   ArrowLeftOnRectangleIcon,
-  InformationCircleIcon
+  InformationCircleIcon,
+  LifebuoyIcon
 } from "@heroicons/react/24/outline"; // Import new icons
 
 const Dashboard = () => {
@@ -25,6 +26,7 @@ const Dashboard = () => {
 
   return (
     <div className="flex min-h-screen bg-gray-100">
+
       {/* Sidebar */}
       <aside
         className={`fixed inset-y-0 left-0 transform ${
@@ -58,11 +60,20 @@ const Dashboard = () => {
           </li>
           <li className="hover:bg-gray-700 p-2 rounded-md">
             <Link
-              to="/updatesandinfo"
+              to="/updatesandinfoinside"
               className="flex items-center space-x-2"
             >
               <InformationCircleIcon className="h-6 w-6" />
               <span>Updates And Info</span>
+            </Link>
+          </li>
+          <li className="hover:bg-gray-700 p-2 rounded-md">
+            <Link
+              to="/support"
+              className="flex items-center space-x-2"
+            >
+              <LifebuoyIcon className="h-6 w-6" />
+              <span>Support</span>
             </Link>
           </li>
           <li className="hover:bg-gray-700 p-2 rounded-md">

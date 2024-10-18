@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import emailjs from "@emailjs/browser";
+import { Snackbar, Alert } from "@mui/material";
 
 const TeamPage = () => {
+  const [openSnackbar, setOpenSnackbar] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -15,8 +18,40 @@ const TeamPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log(formData);
+    const serviceID = "service_dmb2t0g";
+    const templateID = "template_0oxe3pm";
+    const publicKey = "ZdHlZv8oVC2pij1Ps";
+
+    const templateParams = {
+      from_name: formData?.name,
+      email_id: formData?.email,
+      to_name: "Poma Support",
+      message: formData?.message,
+    };
+    emailjs
+      .send(serviceID, templateID, templateParams, publicKey)
+      .then((response) => {
+        console.log("Email sent successfully!", response.status, response.text);
+
+        // Send the form data to the server via axios
+        axios
+          .post("http://localhost:5000/support", {
+            name: formData.name,
+            email: formData.email,
+            message: formData.message,
+          })
+          .then(() => {
+            console.log("Support request sent successfully");
+            setFormData({ name: "", email: "", message: "" }); // Clear form data
+            setOpenSnackbar(true); // Open success Snackbar
+          })
+          .catch((error) => {
+            console.error("Failed to send support request:", error);
+          });
+      })
+      .catch((error) => {
+        console.error("Failed to send email:", error);
+      });
   };
 
   const fetchTeamMembers = async () => {
@@ -32,6 +67,9 @@ const TeamPage = () => {
   useEffect(() => {
     fetchTeamMembers();
   }, []);
+  const handleCloseSnackbar = () => {
+    setOpenSnackbar(false);
+  };
 
   return (
     <div className="bg-gray-100 min-h-screen py-12">
@@ -127,6 +165,20 @@ const TeamPage = () => {
           </div>
         </div>
       </div>
+      <Snackbar
+        open={openSnackbar}
+        autoHideDuration={4000}
+        onClose={handleCloseSnackbar}
+        anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+      >
+        <Alert
+          onClose={handleCloseSnackbar}
+          severity="success"
+          sx={{ width: "100%" }}
+        >
+          Your question has been sent successfully!
+        </Alert>
+      </Snackbar>
     </div>
   );
 };

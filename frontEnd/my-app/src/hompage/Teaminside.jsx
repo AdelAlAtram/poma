@@ -9,7 +9,6 @@ import {
   Snackbar,
   Alert,
 } from "@mui/material";
-import { Edit, Delete } from "@mui/icons-material"; // Import Material UI icons
 import axios from "axios";
 
 const Teaminside = () => {
